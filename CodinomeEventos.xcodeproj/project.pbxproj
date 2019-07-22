@@ -12,6 +12,7 @@
 		E521CD1822E0A0F4000C192D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E521CD1622E0A0F4000C192D /* Main.storyboard */; };
 		E521CD1A22E0A0F4000C192D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E521CD1922E0A0F4000C192D /* Assets.xcassets */; };
 		E521CD1D22E0A0F4000C192D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E521CD1B22E0A0F4000C192D /* LaunchScreen.storyboard */; };
+		E53AD41222E5E6C000ED5CA7 /* CodinomeEventos.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E53AD41022E5E6C000ED5CA7 /* CodinomeEventos.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		E521CD1922E0A0F4000C192D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E521CD1C22E0A0F4000C192D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E521CD1E22E0A0F4000C192D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E53AD41122E5E6C000ED5CA7 /* CodinomeEventos.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CodinomeEventos.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				E521CD1922E0A0F4000C192D /* Assets.xcassets */,
 				E521CD1B22E0A0F4000C192D /* LaunchScreen.storyboard */,
 				E521CD1E22E0A0F4000C192D /* Info.plist */,
+				E53AD41022E5E6C000ED5CA7 /* CodinomeEventos.xcdatamodeld */,
 			);
 			path = CodinomeEventos;
 			sourceTree = "<group>";
@@ -136,6 +139,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E521CD1522E0A0F4000C192D /* ViewController.swift in Sources */,
+				E53AD41222E5E6C000ED5CA7 /* CodinomeEventos.xcdatamodeld in Sources */,
 				E521CD1322E0A0F4000C192D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -334,6 +338,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		E53AD41022E5E6C000ED5CA7 /* CodinomeEventos.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				E53AD41122E5E6C000ED5CA7 /* CodinomeEventos.xcdatamodel */,
+			);
+			currentVersion = E53AD41122E5E6C000ED5CA7 /* CodinomeEventos.xcdatamodel */;
+			path = CodinomeEventos.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = E521CD0722E0A0F3000C192D /* Project object */;
 }
