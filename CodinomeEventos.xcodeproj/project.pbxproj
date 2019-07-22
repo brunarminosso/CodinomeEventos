@@ -16,6 +16,8 @@
 		E53AD41222E5E6C000ED5CA7 /* CodinomeEventos.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E53AD41022E5E6C000ED5CA7 /* CodinomeEventos.xcdatamodeld */; };
 		E53AD41A22E5F71D00ED5CA7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E53AD41922E5F71D00ED5CA7 /* GoogleService-Info.plist */; };
 		E566A0A022E6151200C11330 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E566A09F22E6151200C11330 /* LoginView.swift */; };
+		FE79EDB322E63105007833A2 /* FornecedoresTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE79EDB222E63105007833A2 /* FornecedoresTableViewCell.swift */; };
+		FE79EDB522E63786007833A2 /* PesquisaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE79EDB422E63786007833A2 /* PesquisaViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		E53AD41122E5E6C000ED5CA7 /* CodinomeEventos.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CodinomeEventos.xcdatamodel; sourceTree = "<group>"; };
 		E53AD41922E5F71D00ED5CA7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E566A09F22E6151200C11330 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		FE79EDB222E63105007833A2 /* FornecedoresTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FornecedoresTableViewCell.swift; sourceTree = "<group>"; };
+		FE79EDB422E63786007833A2 /* PesquisaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PesquisaViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +88,8 @@
 		E521CD1122E0A0F3000C192D /* CodinomeEventos */ = {
 			isa = PBXGroup;
 			children = (
+				FE79EDB122E630E3007833A2 /* TableView */,
+				FE79EDB022E63072007833A2 /* ViewController */,
 				E521CD1222E0A0F4000C192D /* AppDelegate.swift */,
 				E521CD1422E0A0F4000C192D /* ViewController.swift */,
 				E521CD1622E0A0F4000C192D /* Main.storyboard */,
@@ -97,6 +103,22 @@
 			path = CodinomeEventos;
 			sourceTree = "<group>";
 		};
+		FE79EDB022E63072007833A2 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				FE79EDB422E63786007833A2 /* PesquisaViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		FE79EDB122E630E3007833A2 /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				FE79EDB222E63105007833A2 /* FornecedoresTableViewCell.swift */,
+			);
+			path = TableView;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -108,7 +130,7 @@
 				E521CD0B22E0A0F3000C192D /* Sources */,
 				E521CD0C22E0A0F3000C192D /* Frameworks */,
 				E521CD0D22E0A0F3000C192D /* Resources */,
-				B04C8DA42E10059051D56ADA /* [CP] Embed Pods Frameworks */,
+				4D19A4F16D5DE22BABDB12DE /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -167,7 +189,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		B04C8DA42E10059051D56ADA /* [CP] Embed Pods Frameworks */ = {
+		4D19A4F16D5DE22BABDB12DE /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -213,6 +235,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE79EDB322E63105007833A2 /* FornecedoresTableViewCell.swift in Sources */,
+				FE79EDB522E63786007833A2 /* PesquisaViewController.swift in Sources */,
 				E521CD1522E0A0F4000C192D /* ViewController.swift in Sources */,
 				E53AD41222E5E6C000ED5CA7 /* CodinomeEventos.xcdatamodeld in Sources */,
 				E566A0A022E6151200C11330 /* LoginView.swift in Sources */,

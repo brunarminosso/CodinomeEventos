@@ -8,48 +8,50 @@
 
 import UIKit
 
+import Firebase
 
+@objc(LoginView)
 class LoginView: UIViewController {
-    
-    
     
     @IBOutlet weak var emailText: UITextField!
     
     @IBOutlet weak var senhaText: UITextField!
     
-    var password = ""
-    var email = ""
+    // Do any additional setup after loading the view.
     
     
-    
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
     }
     
-    
-    
-    
-    @IBAction func LoginButton(_ sender: Any) {
-        Auth.auth().signIn(withEmail: email, password: password) { [weak self] user, error in
-            guard let strongSelf = self else { return }
+    @IBAction func LoginButton(_ sender: AnyObject) {
+        guard let email = self.emailText.text, let password = self.senhaText.text else {
+            
+            return
         }
+        /*  showSpinner   {
+         Auth.auth().signIn(withEmail: email, password: password) { [weak self] user, error in
+         guard let strongSelf = self else { return }
+         
+         strongSelf.hideSpinner {
+         if let error = error {
+         strongSelf.showMessagePrompt(error.localizedDescription)
+         return
+         }
+         strongSelf.navigationController?.popViewController(animated: true)
+         }
+         }
+         }
+         }
+         
+         */
+        
+        
+        
+        
+        
+        
     }
     
-   
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
-}
 }
