@@ -7,15 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5115DDD0895E3E9BDDE0C2DD /* Pods_CodinomeEventos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 290C8F305E4F144C382F2F69 /* Pods_CodinomeEventos.framework */; };
 		E521CD1322E0A0F4000C192D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E521CD1222E0A0F4000C192D /* AppDelegate.swift */; };
 		E521CD1522E0A0F4000C192D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E521CD1422E0A0F4000C192D /* ViewController.swift */; };
 		E521CD1822E0A0F4000C192D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E521CD1622E0A0F4000C192D /* Main.storyboard */; };
 		E521CD1A22E0A0F4000C192D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E521CD1922E0A0F4000C192D /* Assets.xcassets */; };
 		E521CD1D22E0A0F4000C192D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E521CD1B22E0A0F4000C192D /* LaunchScreen.storyboard */; };
 		E53AD41222E5E6C000ED5CA7 /* CodinomeEventos.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E53AD41022E5E6C000ED5CA7 /* CodinomeEventos.xcdatamodeld */; };
+		E53AD41A22E5F71D00ED5CA7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E53AD41922E5F71D00ED5CA7 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		290C8F305E4F144C382F2F69 /* Pods_CodinomeEventos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CodinomeEventos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B1BA00CE3998458ED18AAFB9 /* Pods-CodinomeEventos.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CodinomeEventos.release.xcconfig"; path = "Target Support Files/Pods-CodinomeEventos/Pods-CodinomeEventos.release.xcconfig"; sourceTree = "<group>"; };
+		BD85E3D19003052BC1445E3B /* Pods-CodinomeEventos.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CodinomeEventos.debug.xcconfig"; path = "Target Support Files/Pods-CodinomeEventos/Pods-CodinomeEventos.debug.xcconfig"; sourceTree = "<group>"; };
 		E521CD0F22E0A0F3000C192D /* CodinomeEventos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CodinomeEventos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E521CD1222E0A0F4000C192D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E521CD1422E0A0F4000C192D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -24,6 +29,7 @@
 		E521CD1C22E0A0F4000C192D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E521CD1E22E0A0F4000C192D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E53AD41122E5E6C000ED5CA7 /* CodinomeEventos.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CodinomeEventos.xcdatamodel; sourceTree = "<group>"; };
+		E53AD41922E5F71D00ED5CA7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +37,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5115DDD0895E3E9BDDE0C2DD /* Pods_CodinomeEventos.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		36E6CA14CACC6D3ACC613BD2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BD85E3D19003052BC1445E3B /* Pods-CodinomeEventos.debug.xcconfig */,
+				B1BA00CE3998458ED18AAFB9 /* Pods-CodinomeEventos.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		C3A5E32DB1A6914F01A17C2D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				290C8F305E4F144C382F2F69 /* Pods_CodinomeEventos.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		E521CD0622E0A0F3000C192D = {
 			isa = PBXGroup;
 			children = (
 				E521CD1122E0A0F3000C192D /* CodinomeEventos */,
 				E521CD1022E0A0F3000C192D /* Products */,
+				36E6CA14CACC6D3ACC613BD2 /* Pods */,
+				C3A5E32DB1A6914F01A17C2D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -63,6 +90,7 @@
 				E521CD1B22E0A0F4000C192D /* LaunchScreen.storyboard */,
 				E521CD1E22E0A0F4000C192D /* Info.plist */,
 				E53AD41022E5E6C000ED5CA7 /* CodinomeEventos.xcdatamodeld */,
+				E53AD41922E5F71D00ED5CA7 /* GoogleService-Info.plist */,
 			);
 			path = CodinomeEventos;
 			sourceTree = "<group>";
@@ -74,9 +102,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E521CD2122E0A0F4000C192D /* Build configuration list for PBXNativeTarget "CodinomeEventos" */;
 			buildPhases = (
+				FD193FC7B7C4EBB2157526C1 /* [CP] Check Pods Manifest.lock */,
 				E521CD0B22E0A0F3000C192D /* Sources */,
 				E521CD0C22E0A0F3000C192D /* Frameworks */,
 				E521CD0D22E0A0F3000C192D /* Resources */,
+				B04C8DA42E10059051D56ADA /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -126,12 +156,55 @@
 			buildActionMask = 2147483647;
 			files = (
 				E521CD1D22E0A0F4000C192D /* LaunchScreen.storyboard in Resources */,
+				E53AD41A22E5F71D00ED5CA7 /* GoogleService-Info.plist in Resources */,
 				E521CD1A22E0A0F4000C192D /* Assets.xcassets in Resources */,
 				E521CD1822E0A0F4000C192D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B04C8DA42E10059051D56ADA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CodinomeEventos/Pods-CodinomeEventos-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CodinomeEventos/Pods-CodinomeEventos-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CodinomeEventos/Pods-CodinomeEventos-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FD193FC7B7C4EBB2157526C1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CodinomeEventos-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E521CD0B22E0A0F3000C192D /* Sources */ = {
@@ -284,6 +357,7 @@
 		};
 		E521CD2222E0A0F4000C192D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BD85E3D19003052BC1445E3B /* Pods-CodinomeEventos.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -301,6 +375,7 @@
 		};
 		E521CD2322E0A0F4000C192D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B1BA00CE3998458ED18AAFB9 /* Pods-CodinomeEventos.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
