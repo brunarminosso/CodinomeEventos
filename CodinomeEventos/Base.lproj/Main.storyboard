@@ -60,11 +60,13 @@
                     <connections>
                         <outlet property="emailText" destination="0AD-j0-dwR" id="7OP-RW-4KH"/>
                         <outlet property="senhaText" destination="p5w-rh-5Hc" id="MKp-g0-W2c"/>
+                        <segue destination="Vle-93-yuS" kind="show" identifier="loginToHome" id="4Ai-0g-KBv"/>
+                        <segue destination="Vle-93-yuS" kind="show" identifier="LogintoFace" id="xoS-DT-ZHn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-545" y="-145"/>
+            <point key="canvasLocation" x="-564" y="-154"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="GRg-5M-tfJ">
@@ -617,4 +619,7 @@
     <resources>
         <image name="Rectangle" width="344" height="48"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="xoS-DT-ZHn"/>
+    </inferredMetricsTieBreakers>
 </document>

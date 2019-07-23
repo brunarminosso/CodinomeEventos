@@ -7,5 +7,10 @@ target 'CodinomeEventos' do
 
   # Pods for CodinomeEventos
   pod 'Firebase/Analytics'
-  pod 'firebase/Auth'
+  pod 'Firebase/Auth'
+  pod 'FBSDKLoginKit'
+  pod 'FBSDKCoreKit'
+  pod 'FacebookCore'
+  pod 'FacebookLogin'
+  
 end
