@@ -13,7 +13,7 @@
         <!--Login View-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="LoginView" customModule="CodinomeEventos" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="LoginView" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -58,13 +58,13 @@
                     </view>
                     <navigationItem key="navigationItem" id="xQf-BD-5mm"/>
                     <connections>
-                        <outlet property="emailText" destination="0AD-j0-dwR" id="ZK2-Cf-NBK"/>
-                        <outlet property="senhaText" destination="p5w-rh-5Hc" id="juS-nQ-O22"/>
+                        <outlet property="emailText" destination="0AD-j0-dwR" id="7OP-RW-4KH"/>
+                        <outlet property="senhaText" destination="p5w-rh-5Hc" id="MKp-g0-W2c"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-539" y="-127"/>
+            <point key="canvasLocation" x="-545" y="-145"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="GRg-5M-tfJ">
@@ -219,7 +219,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Zd-fS-B3q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1396" y="-145"/>
+            <point key="canvasLocation" x="-1423" y="-145"/>
         </scene>
         <!--mensagens-->
         <scene sceneID="9Rv-Ss-BoC">
