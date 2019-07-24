@@ -12,12 +12,23 @@ import UIKit
 
 class PesquisaViewController: UIViewController{
     
+    var tituloBotao: String!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 //        tableView.delegate = self
 //        tableView.dataSource = self
     }
     
+    @IBAction func buttonPress(_ sender: UIButton) {
+        tituloBotao = sender.titleLabel?.text ?? ""
+        performSegue(withIdentifier: "segueLista", sender: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destination = segue.destination as? ListaDeFornecedoresViewController
+        destination?.filtro = tituloBotao
+    }
    
 }
 

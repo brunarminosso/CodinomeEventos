@@ -19,7 +19,7 @@ struct Fornecedor: Codable {
     let estado: String
     let telefone_fixo: String
     let celular: String
-//    let categoria: String
+    var categoria: String
 //    let nota_avaliacao_media: Double
 //    let descricao: String
 //    let avaliacao_texto1: String
@@ -39,7 +39,7 @@ struct Fornecedor: Codable {
         case estado = "estado"
         case telefone_fixo = "telefone_fixo"
         case celular = "celular"
-//        case categoria = "categoria"
+        case categoria = "categoria"
 //        case nota_avaliacao_media = "nota_avaliacao_media"
 //        case descricao = "descricao"
 //        case avaliacao_texto1 = "avaliacao_texto1"
@@ -61,7 +61,7 @@ class ListaDeFornecedoresViewController: UIViewController, UITableViewDataSource
 
         cell?.ListaFornecedores_nomeFornecedor.text = listaFornecedores[indexPath.row].nome
         cell?.ListaFornecedores_endereco.text = listaFornecedores[indexPath.row].bairro
-        cell?.ListaFornecedores_Categoria.text = listaFornecedores[indexPath.row].senha
+        cell?.ListaFornecedores_Categoria.text = listaFornecedores[indexPath.row].categoria
         cell?.ListaFornecedores_ImagemFornecedor.image = UIImage(named: "confeitaria")
         
         return cell!
@@ -72,7 +72,7 @@ class ListaDeFornecedoresViewController: UIViewController, UITableViewDataSource
     }
     
     var listaFornecedores = [Fornecedor]()
-
+    var filtro : String = ""
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
@@ -97,7 +97,7 @@ class ListaDeFornecedoresViewController: UIViewController, UITableViewDataSource
     
     func getdata() {
         
-        let jsonUrlString = "https://gist.githubusercontent.com/alineescobar/8aa8fd62a3929f82aae7720edc1900ab/raw/076ea119588664ba1cdf4ed7cf047082cf3905a4/fornecedores.json"
+        let jsonUrlString = "https://gist.githubusercontent.com/alineescobar/8aa8fd62a3929f82aae7720edc1900ab/raw/f3c8811ceea9ba5cc4fb429a3685760585e59d31/fornecedores.json"
         
         guard let url = URL(string: jsonUrlString) else {return}
         
@@ -109,9 +109,10 @@ class ListaDeFornecedoresViewController: UIViewController, UITableViewDataSource
                 let dados = try JSONDecoder().decode([Fornecedor].self, from: data)
                 
                 DispatchQueue.main.async {
-                    self.listaFornecedores = dados
+                    self.listaFornecedores = dados.filter { $0.categoria == self.filtro }
                     self.tableView.reloadData()
                     print("Numero de linhas:", self.listaFornecedores.count)
+                    
                 }
                 
             } catch let jsonErr{

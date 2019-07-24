@@ -17,8 +17,6 @@ import FacebookLogin
 
 
 
-
-
 @objc(LoginView)
 class LoginView: UIViewController {
    
@@ -65,8 +63,8 @@ class LoginView: UIViewController {
                 }
             }
             
-        self.view.addSubview(btnFBLogin)
-    }
+            self.view.addSubview(btnFBLogin)
+        }
     }
     
 //            Auth.auth().signIn(with: credential) { (authResult, error) in
@@ -98,7 +96,7 @@ class LoginView: UIViewController {
 
     @IBAction func LoginButton(_ sender: AnyObject) {
         do {
-            
+
             Auth.auth().signIn(withEmail: emailText.text!, password: senhaText.text!) { (user, error) in
                 if error == nil{
                     self.performSegue(withIdentifier: "loginToHome", sender: self)
@@ -106,21 +104,21 @@ class LoginView: UIViewController {
                 else{
                     let alertController = UIAlertController(title: "Error", message: error?.localizedDescription, preferredStyle: .alert)
                     let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
-                    
+
                     alertController.addAction(defaultAction)
                     self.present(alertController, animated: true, completion: nil)
                 }
             }
-            
+
         }
-      
- 
+
+
     }
-    
-        
-        
+
+
+
     }
-    
+
     
     
 

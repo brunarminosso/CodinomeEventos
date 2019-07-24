@@ -20,6 +20,7 @@
 		FE79EDB522E63786007833A2 /* PesquisaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE79EDB422E63786007833A2 /* PesquisaViewController.swift */; };
 		FE99159F22E7509C0094472A /* ListaDeFornecedoresViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE99159E22E7509C0094472A /* ListaDeFornecedoresViewController.swift */; };
 		FE9915A122E790010094472A /* DetalhesFornecedorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE9915A022E790010094472A /* DetalhesFornecedorViewController.swift */; };
+		FEAE272922E8825300F9D6F4 /* RatingControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAE272822E8825300F9D6F4 /* RatingControl.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		FE79EDB422E63786007833A2 /* PesquisaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PesquisaViewController.swift; sourceTree = "<group>"; };
 		FE99159E22E7509C0094472A /* ListaDeFornecedoresViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaDeFornecedoresViewController.swift; sourceTree = "<group>"; };
 		FE9915A022E790010094472A /* DetalhesFornecedorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalhesFornecedorViewController.swift; sourceTree = "<group>"; };
+		FEAE272822E8825300F9D6F4 /* RatingControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingControl.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +94,7 @@
 		E521CD1122E0A0F3000C192D /* CodinomeEventos */ = {
 			isa = PBXGroup;
 			children = (
+				FEAE272722E8822000F9D6F4 /* StackView */,
 				FE79EDB122E630E3007833A2 /* TableView */,
 				FE79EDB022E63072007833A2 /* ViewController */,
 				E521CD1222E0A0F4000C192D /* AppDelegate.swift */,
@@ -123,6 +126,14 @@
 				FE79EDB222E63105007833A2 /* FornecedoresTableViewCell.swift */,
 			);
 			path = TableView;
+			sourceTree = "<group>";
+		};
+		FEAE272722E8822000F9D6F4 /* StackView */ = {
+			isa = PBXGroup;
+			children = (
+				FEAE272822E8825300F9D6F4 /* RatingControl.swift */,
+			);
+			path = StackView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -245,6 +256,7 @@
 				FE9915A122E790010094472A /* DetalhesFornecedorViewController.swift in Sources */,
 				FE79EDB522E63786007833A2 /* PesquisaViewController.swift in Sources */,
 				FE99159F22E7509C0094472A /* ListaDeFornecedoresViewController.swift in Sources */,
+				FEAE272922E8825300F9D6F4 /* RatingControl.swift in Sources */,
 				E521CD1522E0A0F4000C192D /* ViewController.swift in Sources */,
 				E53AD41222E5E6C000ED5CA7 /* CodinomeEventos.xcdatamodeld in Sources */,
 				E566A0A022E6151200C11330 /* LoginView.swift in Sources */,
