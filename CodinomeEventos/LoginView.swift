@@ -25,16 +25,18 @@ class LoginView: UIViewController {
     @IBOutlet weak var emailText: UITextField!
     
     @IBOutlet weak var senhaText: UITextField!
+//    textField.isSecureTextEntry = true
     
     var email = ""
     var password = ""
+    
     let btnFBLogin = FBLoginButton()
     
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    
+        senhaText.isSecureTextEntry = true
         let btnFBLogin = FBLoginButton(frame: CGRect(x: 100, y: 100, width: 100, height: 20))
         do {
             func loginButton(_ loginButton: FBLoginButton!, didCompleteWith result: LoginManagerLoginResult!, error: Error!) {
@@ -115,9 +117,31 @@ class LoginView: UIViewController {
 
     }
 
+    @IBAction func forgotPass(_ sender: Any) {
+        
+        let alert = UIAlertController(title: "Esqueceu a senha?", message: "Digite seu e-mail", preferredStyle: .alert)
+        
+        alert.addTextField { (textfield) in
+            
+            
+            
+        }
+        alert.addAction(UIAlertAction(title: "Enviar", style: .default, handler: { action in
+            Auth.auth().sendPasswordReset(withEmail: alert.textFields?.first?.text ?? "") { error in
+                
+            }
+           
+}
+        ))
+        self.present(alert, animated: true, completion: nil)
 
 
-    }
+    
+}
+    
+    
+}
+
 
     
     
