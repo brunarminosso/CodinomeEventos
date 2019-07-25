@@ -7,7 +7,8 @@
 //
 
 import UIKit
-
+//codigo apenas para visualizacao do avaliacao
+//falta linkar o valor da avaliacao com a armazenada no banco de dados
 @IBDesignable class RatingControl: UIStackView {
     
 //MARK: Properties
@@ -55,7 +56,7 @@ import UIKit
         button.heightAnchor.constraint(equalToConstant: starSize.height).isActive = true
         button.widthAnchor.constraint(equalToConstant: starSize.width).isActive = true
 //        Setup the button action
-        button.addTarget(self, action: #selector(RatingControl.rattingButtonTapped(button:)), for: .touchUpInside)
+//        button.addTarget(self, action: #selector(RatingControl.rattingButtonTapped(button:)), for: .touchUpInside)
 //        Add the button to the stack
         addArrangedSubview(button)
 //        Add the new button to the rating button array

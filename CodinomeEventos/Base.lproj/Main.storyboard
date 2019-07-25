@@ -198,7 +198,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7kC-ji-bs9" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-487" y="-844"/>
+            <point key="canvasLocation" x="-565" y="-817"/>
         </scene>
         <!--tela de pesquisa-->
         <scene sceneID="wEL-oS-Wfs">
@@ -508,6 +508,9 @@
                         <viewLayoutGuide key="safeArea" id="u6d-m8-OJL"/>
                     </view>
                     <navigationItem key="navigationItem" id="NIW-IT-DJm"/>
+                    <connections>
+                        <segue destination="MFa-wy-q3W" kind="show" id="vyP-KR-EQq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mSS-qE-EVW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -541,7 +544,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BUO-qG-oXP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1174" y="-2324"/>
+            <point key="canvasLocation" x="2887" y="-2281"/>
         </scene>
         <!--lista de fornecedores-->
         <scene sceneID="1WZ-0B-Kuj">
@@ -551,7 +554,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="BKe-Uk-sgK">
+                            <searchBar contentMode="redraw" text="" translatesAutoresizingMaskIntoConstraints="NO" id="BKe-Uk-sgK">
                                 <rect key="frame" x="0.0" y="88" width="414" height="56"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
@@ -640,6 +643,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" systemItem="search" id="ZfQ-c5-tHG"/>
                     <connections>
+                        <outlet property="buscaFornecedores" destination="BKe-Uk-sgK" id="XFg-tn-GSd"/>
                         <outlet property="tableView" destination="6KR-ug-Nwf" id="eVP-Nq-Z98"/>
                         <segue destination="5hQ-V9-bjG" kind="show" identifier="segueDetalhesFornecedor" id="lAq-6V-9bo"/>
                     </connections>
@@ -717,7 +721,7 @@
         <!--avaliaçao do fornecedor-->
         <scene sceneID="Cf2-gf-haj">
             <objects>
-                <viewController title="avaliaçao do fornecedor" id="zzZ-Vw-44v" sceneMemberID="viewController">
+                <viewController title="avaliaçao do fornecedor" id="zzZ-Vw-44v" customClass="AvaliarFornecedorViewController" customModule="CodinomeEventos" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gUa-O2-aiR">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -743,15 +747,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Formalidade" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2qv-4K-DaF">
-                                <rect key="frame" x="20" y="326" width="95" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Preço" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KnH-gE-7y3">
-                                <rect key="frame" x="23" y="405" width="45" height="21"/>
+                                <rect key="frame" x="23" y="325" width="45" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -771,12 +768,10 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="tnH-83-SS3">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tnH-83-SS3">
                                 <rect key="frame" x="23" y="511" width="371" height="217"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T73-yv-IIZ">
@@ -785,8 +780,12 @@
                                 <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Avaliar"/>
                             </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8vO-vR-ESd" customClass="RatingControl" customModule="CodinomeEventos" customModuleProvider="target">
-                                <rect key="frame" x="23" y="202" width="200" height="42"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="8vO-vR-ESd" customClass="RatingPontualidade" customModule="CodinomeEventos" customModuleProvider="target">
+                                <rect key="frame" x="23" y="202" width="250" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="K4c-xw-Ake" customClass="RatingQualidade" customModule="CodinomeEventos" customModuleProvider="target">
+                                <rect key="frame" x="20" y="276" width="254" height="42"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="starCount">
@@ -794,26 +793,8 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="K4c-xw-Ake" customClass="RatingControl" customModule="CodinomeEventos" customModuleProvider="target">
-                                <rect key="frame" x="20" y="276" width="200" height="42"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="starCount">
-                                        <integer key="value" value="5"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mz0-Ec-H9D" customClass="RatingControl" customModule="CodinomeEventos" customModuleProvider="target">
-                                <rect key="frame" x="23" y="355" width="200" height="42"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="starCount">
-                                        <integer key="value" value="5"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hzt-o3-pTm" customClass="RatingControl" customModule="CodinomeEventos" customModuleProvider="target">
-                                <rect key="frame" x="20" y="427" width="200" height="42"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="hzt-o3-pTm" customClass="RatingPreco" customModule="CodinomeEventos" customModuleProvider="target">
+                                <rect key="frame" x="20" y="347" width="254" height="42"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="starCount">
@@ -826,6 +807,12 @@
                         <viewLayoutGuide key="safeArea" id="6If-yk-QTu"/>
                     </view>
                     <tabBarItem key="tabBarItem" systemItem="search" id="m96-Iz-A0L"/>
+                    <connections>
+                        <outlet property="caixaComentario" destination="tnH-83-SS3" id="4ox-OI-KAx"/>
+                        <outlet property="ratingPontualidadeView" destination="8vO-vR-ESd" id="QDI-W8-dGi"/>
+                        <outlet property="ratingPrecoView" destination="hzt-o3-pTm" id="5EW-fh-krQ"/>
+                        <outlet property="ratingQualidadeView" destination="K4c-xw-Ake" id="bfn-02-kOj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g6j-AC-KKy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

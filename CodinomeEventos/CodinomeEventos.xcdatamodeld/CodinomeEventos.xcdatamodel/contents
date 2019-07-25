@@ -1,4 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14490.99" systemVersion="18F132" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <elements/>
+    <entity name="Dados_eventos_usuario" representedClassName="Dados_eventos_usuario" syncable="YES" codeGenerationType="class"/>
+    <entity name="Dados_fornecedor" representedClassName="Dados_fornecedor" syncable="YES" codeGenerationType="class">
+        <attribute name="avalMedia" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="pontualidadeMedia" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="precoMedia" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="providerID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="providerName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="qualidadeMedia" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Dados_fornecedor" positionX="-54" positionY="-9" width="128" height="135"/>
+        <element name="Dados_eventos_usuario" positionX="-36" positionY="72" width="128" height="45"/>
+    </elements>
 </model>

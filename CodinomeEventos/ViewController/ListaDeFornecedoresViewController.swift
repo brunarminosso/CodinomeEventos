@@ -71,8 +71,15 @@ class ListaDeFornecedoresViewController: UIViewController, UITableViewDataSource
         performSegue(withIdentifier: "segueDetalhesFornecedor", sender: listaFornecedores[indexPath.row])
     }
     
+    func filterContentForSearchText (_ searchText: String, scope: String = "All"){
+//        todo
+    }
+    
     var listaFornecedores = [Fornecedor]()
     var filtro : String = ""
+    
+    @IBOutlet weak var buscaFornecedores: UISearchBar!
+    
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
@@ -81,7 +88,10 @@ class ListaDeFornecedoresViewController: UIViewController, UITableViewDataSource
         tableView.delegate = self
         tableView.dataSource = self
         getdata()
+        buscaFornecedores.placeholder = "Busque seus fornecedores"
     }
+    
+    
     
    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     if segue.identifier == "segueDetalhesFornecedor" {
@@ -119,5 +129,10 @@ class ListaDeFornecedoresViewController: UIViewController, UITableViewDataSource
                 print("Error serializating JSON", jsonErr)
             }
             }.resume()
+    }
+}
+extension ListaDeFornecedoresViewController: UISearchResultsUpdating{
+    func updateSearchResults(for searchController: UISearchController) {
+//        pesquisa
     }
 }

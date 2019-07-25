@@ -14,10 +14,13 @@ class PesquisaViewController: UIViewController{
     
     var tituloBotao: String!
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 //        tableView.delegate = self
 //        tableView.dataSource = self
+        
     }
     
     @IBAction func buttonPress(_ sender: UIButton) {
@@ -29,6 +32,4 @@ class PesquisaViewController: UIViewController{
         let destination = segue.destination as? ListaDeFornecedoresViewController
         destination?.filtro = tituloBotao
     }
-   
 }
-

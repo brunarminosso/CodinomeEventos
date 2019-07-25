@@ -16,6 +16,11 @@
 		E53AD41222E5E6C000ED5CA7 /* CodinomeEventos.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E53AD41022E5E6C000ED5CA7 /* CodinomeEventos.xcdatamodeld */; };
 		E53AD41A22E5F71D00ED5CA7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E53AD41922E5F71D00ED5CA7 /* GoogleService-Info.plist */; };
 		E566A0A022E6151200C11330 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E566A09F22E6151200C11330 /* LoginView.swift */; };
+		FE5C801A22E9F090003DA454 /* CriarEventosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5C801922E9F090003DA454 /* CriarEventosViewController.swift */; };
+		FE5C801C22EA056F003DA454 /* AvaliarFornecedorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5C801B22EA056F003DA454 /* AvaliarFornecedorViewController.swift */; };
+		FE5C801E22EA0905003DA454 /* RatingPontualidade.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5C801D22EA0905003DA454 /* RatingPontualidade.swift */; };
+		FE5C802022EA3690003DA454 /* RatingQualidade.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5C801F22EA3690003DA454 /* RatingQualidade.swift */; };
+		FE5C802222EA36AE003DA454 /* RatingPreco.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5C802122EA36AE003DA454 /* RatingPreco.swift */; };
 		FE79EDB322E63105007833A2 /* FornecedoresTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE79EDB222E63105007833A2 /* FornecedoresTableViewCell.swift */; };
 		FE79EDB522E63786007833A2 /* PesquisaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE79EDB422E63786007833A2 /* PesquisaViewController.swift */; };
 		FE99159F22E7509C0094472A /* ListaDeFornecedoresViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE99159E22E7509C0094472A /* ListaDeFornecedoresViewController.swift */; };
@@ -37,6 +42,11 @@
 		E53AD41122E5E6C000ED5CA7 /* CodinomeEventos.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CodinomeEventos.xcdatamodel; sourceTree = "<group>"; };
 		E53AD41922E5F71D00ED5CA7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E566A09F22E6151200C11330 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		FE5C801922E9F090003DA454 /* CriarEventosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CriarEventosViewController.swift; sourceTree = "<group>"; };
+		FE5C801B22EA056F003DA454 /* AvaliarFornecedorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvaliarFornecedorViewController.swift; sourceTree = "<group>"; };
+		FE5C801D22EA0905003DA454 /* RatingPontualidade.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingPontualidade.swift; sourceTree = "<group>"; };
+		FE5C801F22EA3690003DA454 /* RatingQualidade.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingQualidade.swift; sourceTree = "<group>"; };
+		FE5C802122EA36AE003DA454 /* RatingPreco.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingPreco.swift; sourceTree = "<group>"; };
 		FE79EDB222E63105007833A2 /* FornecedoresTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FornecedoresTableViewCell.swift; sourceTree = "<group>"; };
 		FE79EDB422E63786007833A2 /* PesquisaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PesquisaViewController.swift; sourceTree = "<group>"; };
 		FE99159E22E7509C0094472A /* ListaDeFornecedoresViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaDeFornecedoresViewController.swift; sourceTree = "<group>"; };
@@ -116,6 +126,8 @@
 				FE79EDB422E63786007833A2 /* PesquisaViewController.swift */,
 				FE99159E22E7509C0094472A /* ListaDeFornecedoresViewController.swift */,
 				FE9915A022E790010094472A /* DetalhesFornecedorViewController.swift */,
+				FE5C801922E9F090003DA454 /* CriarEventosViewController.swift */,
+				FE5C801B22EA056F003DA454 /* AvaliarFornecedorViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -132,6 +144,9 @@
 			isa = PBXGroup;
 			children = (
 				FEAE272822E8825300F9D6F4 /* RatingControl.swift */,
+				FE5C801D22EA0905003DA454 /* RatingPontualidade.swift */,
+				FE5C801F22EA3690003DA454 /* RatingQualidade.swift */,
+				FE5C802122EA36AE003DA454 /* RatingPreco.swift */,
 			);
 			path = StackView;
 			sourceTree = "<group>";
@@ -258,8 +273,13 @@
 				FE99159F22E7509C0094472A /* ListaDeFornecedoresViewController.swift in Sources */,
 				FEAE272922E8825300F9D6F4 /* RatingControl.swift in Sources */,
 				E521CD1522E0A0F4000C192D /* ViewController.swift in Sources */,
+				FE5C801C22EA056F003DA454 /* AvaliarFornecedorViewController.swift in Sources */,
+				FE5C801A22E9F090003DA454 /* CriarEventosViewController.swift in Sources */,
 				E53AD41222E5E6C000ED5CA7 /* CodinomeEventos.xcdatamodeld in Sources */,
 				E566A0A022E6151200C11330 /* LoginView.swift in Sources */,
+				FE5C802022EA3690003DA454 /* RatingQualidade.swift in Sources */,
+				FE5C801E22EA0905003DA454 /* RatingPontualidade.swift in Sources */,
+				FE5C802222EA36AE003DA454 /* RatingPreco.swift in Sources */,
 				E521CD1322E0A0F4000C192D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
