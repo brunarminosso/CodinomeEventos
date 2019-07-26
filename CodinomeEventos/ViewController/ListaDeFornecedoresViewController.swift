@@ -7,6 +7,7 @@
 //
 
 import UIKit
+
 struct Fornecedor: Codable {
     let nome : String
     let email: String
@@ -51,34 +52,65 @@ struct Fornecedor: Codable {
 
 class ListaDeFornecedoresViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
+    func isFiltering() -> Bool {
+        return searchController.isActive && !searchBarIsEmpty()
+    }
+    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//        return listaFornecedores.count
+        if isFiltering(){
+            return fornecedorFiltrado.count
+        }
         return listaFornecedores.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ListaFornecedores") as? FornecedoresTableViewCell
-
-        cell?.ListaFornecedores_nomeFornecedor.text = listaFornecedores[indexPath.row].nome
-        cell?.ListaFornecedores_endereco.text = listaFornecedores[indexPath.row].bairro
-        cell?.ListaFornecedores_Categoria.text = listaFornecedores[indexPath.row].categoria
+        
+        let fornecedor: Fornecedor
+        
+        if isFiltering() {
+            fornecedor = fornecedorFiltrado[indexPath.row]
+        }
+        else {
+            fornecedor = listaFornecedores[indexPath.row]
+        }
+        cell?.ListaFornecedores_nomeFornecedor.text = fornecedor.nome
+        cell?.ListaFornecedores_endereco.text = fornecedor.bairro
+        cell?.ListaFornecedores_Categoria.text = fornecedor.categoria
         cell?.ListaFornecedores_ImagemFornecedor.image = UIImage(named: "confeitaria")
         
         return cell!
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "segueDetalhesFornecedor", sender: listaFornecedores[indexPath.row])
-    }
-    
-    func filterContentForSearchText (_ searchText: String, scope: String = "All"){
-//        todo
+        let fornecedor: Fornecedor
+        
+        if isFiltering(){
+            fornecedor = fornecedorFiltrado[indexPath.row]
+        }
+        else {
+            fornecedor = listaFornecedores[indexPath.row]
+        }
+        performSegue(withIdentifier: "segueDetalhesFornecedor", sender: fornecedor)
     }
     
     var listaFornecedores = [Fornecedor]()
-    var filtro : String = ""
+    var filtro: String = ""
+    var fornecedorFiltrado = [Fornecedor]()
+//    declaracao da search bar
+    let searchController = UISearchController(searchResultsController: nil)
     
-    @IBOutlet weak var buscaFornecedores: UISearchBar!
+    func searchBarIsEmpty() -> Bool {
+        return searchController.searchBar.text?.isEmpty ?? true
+    }
+
+    func filterContentForSeachText (_ searchText: String, scope: String = "All") {
+        fornecedorFiltrado = self.listaFornecedores.filter { $0.nome.contains(searchText) }
+        tableView.reloadData()
+        return
+    }
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -88,12 +120,16 @@ class ListaDeFornecedoresViewController: UIViewController, UITableViewDataSource
         tableView.delegate = self
         tableView.dataSource = self
         getdata()
-        buscaFornecedores.placeholder = "Busque seus fornecedores"
+        // Setup the Search Controller
+        searchController.searchResultsUpdater = self
+        searchController.obscuresBackgroundDuringPresentation = false
+        searchController.searchBar.placeholder = "Busque seus fornecedores"
+        navigationItem.searchController = searchController
+        definesPresentationContext = true
+        
     }
     
-    
-    
-   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     if segue.identifier == "segueDetalhesFornecedor" {
         if let viewController = segue.destination as? DetalhesFornecedorViewController {
             if let fornecedores = sender as? Fornecedor {
@@ -104,7 +140,7 @@ class ListaDeFornecedoresViewController: UIViewController, UITableViewDataSource
         }
         }
     }
-    
+
     func getdata() {
         
         let jsonUrlString = "https://gist.githubusercontent.com/alineescobar/8aa8fd62a3929f82aae7720edc1900ab/raw/f3c8811ceea9ba5cc4fb429a3685760585e59d31/fornecedores.json"
@@ -133,6 +169,6 @@ class ListaDeFornecedoresViewController: UIViewController, UITableViewDataSource
 }
 extension ListaDeFornecedoresViewController: UISearchResultsUpdating{
     func updateSearchResults(for searchController: UISearchController) {
-//        pesquisa
+        filterContentForSeachText(searchController.searchBar.text!)
     }
 }

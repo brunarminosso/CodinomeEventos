@@ -12,5 +12,5 @@ target 'CodinomeEventos' do
   pod 'FBSDKCoreKit'
   pod 'FacebookCore'
   pod 'FacebookLogin'
-  
+  pod 'Firebase/Database'
 end
