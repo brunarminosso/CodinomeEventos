@@ -55,7 +55,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="criar conta"/>
                                 <connections>
-                                    <segue destination="UGA-8F-Y2n" kind="show" id="3xS-H8-20a"/>
+                                    <segue destination="UGA-8F-Y2n" kind="show" id="qdo-0g-0w3"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OLz-Fu-P9l">
@@ -115,6 +115,9 @@
                                 <state key="normal" title="cadastrar" backgroundImage="Rectangle">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="botao_cadastrar:" destination="UGA-8F-Y2n" eventType="touchUpInside" id="euO-mD-1iE"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="país" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bIx-3t-LlV">
                                 <rect key="frame" x="39" y="335" width="251" height="30"/>
@@ -158,7 +161,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="CEP" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oZq-iH-drR">
-                                <rect key="frame" x="39" y="449" width="337" height="30"/>
+                                <rect key="frame" x="39" y="449" width="154" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -173,6 +176,13 @@
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="nome completo" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Wdr-7L-ZlR">
                                 <rect key="frame" x="39" y="140" width="337" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="CEP" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eUy-BF-RaB">
+                                <rect key="frame" x="201" y="449" width="175" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -195,8 +205,19 @@
                     </view>
                     <navigationItem key="navigationItem" id="Hh9-sj-zTl"/>
                     <connections>
+                        <outlet property="campo_bairro" destination="LJC-79-vTg" id="Fdn-Wa-27X"/>
+                        <outlet property="campo_bloco" destination="eUy-BF-RaB" id="enP-32-Uyj"/>
+                        <outlet property="campo_cep" destination="oZq-iH-drR" id="phn-VH-ga7"/>
+                        <outlet property="campo_cidade" destination="NeP-at-YhA" id="Qss-Vl-Twj"/>
                         <outlet property="campo_email" destination="jBt-0Q-RoW" id="Zs6-02-luQ"/>
                         <outlet property="campo_nome" destination="Wdr-7L-ZlR" id="Ahw-ly-Gtw"/>
+                        <outlet property="campo_numero" destination="XqL-SS-NKb" id="W01-Lg-xz0"/>
+                        <outlet property="campo_pais" destination="bIx-3t-LlV" id="BCb-5i-fo6"/>
+                        <outlet property="campo_rua" destination="v8z-a5-d80" id="zs7-YW-eWn"/>
+                        <outlet property="campo_senha" destination="tx8-k9-t05" id="6Xw-wc-Q54"/>
+                        <outlet property="campo_senha_igual" destination="SYv-Cz-Oex" id="GM9-vl-ue5"/>
+                        <outlet property="campo_telefone" destination="vXC-LU-2xJ" id="Es9-HN-bLz"/>
+                        <outlet property="campo_uf" destination="K0h-x2-low" id="rPH-qN-eDz"/>
                         <segue destination="Vle-93-yuS" kind="show" identifier="cadastrotohome" id="Dy7-pk-0LH"/>
                     </connections>
                 </viewController>
