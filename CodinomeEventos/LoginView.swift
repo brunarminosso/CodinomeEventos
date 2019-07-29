@@ -15,32 +15,55 @@ import FBSDKLoginKit
 import FacebookCore
 import FacebookLogin
 
-
-
 @objc(LoginView)
 class LoginView: UIViewController {
    
-    
-    
+
     @IBOutlet weak var emailText: UITextField!
     
     @IBOutlet weak var senhaText: UITextField!
-//    textField.isSecureTextEntry = true
+    
+    @IBOutlet weak var forgotPassword: UIButton!
+    
+    @IBOutlet weak var criarConta_visual: UIButton!
     
     var email = ""
     var password = ""
     
     let btnFBLogin = FBLoginButton()
     
+    @IBOutlet weak var botaoLogin_visual: UIButton!
     @IBOutlet weak var welcomeLabel: UILabel!
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //        configuracao visual:
         welcomeLabel.font = UIFont(name: "Lato-SemiBold", size: 28)
         welcomeLabel.textColor = UIColor(red: 0.39, green: 0.2, blue: 0.54, alpha: 1)
+        
+        emailText.borderStyle = UITextField.BorderStyle.none
+        emailText.layer.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 1).cgColor
+        emailText.layer.cornerRadius = 10.0
+        emailText.layer.borderWidth = 1.0
+        emailText.layer.borderColor = UIColor(red: 0.39, green: 0.2, blue: 0.54, alpha: 1).cgColor
+        
         senhaText.isSecureTextEntry = true
-        let btnFBLogin = FBLoginButton(frame: CGRect(x: 100, y: 100, width: 100, height: 20))
+        senhaText.borderStyle = UITextField.BorderStyle.none
+        senhaText.layer.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 1).cgColor
+        senhaText.layer.cornerRadius = 10.0
+        senhaText.layer.borderWidth = 1.0
+        senhaText.layer.borderColor = UIColor(red: 0.39, green: 0.2, blue: 0.54, alpha: 1).cgColor
+
+        botaoLogin_visual.layer.backgroundColor = UIColor(red: 0.39, green: 0.2, blue: 0.54, alpha: 1).cgColor
+        botaoLogin_visual.layer.cornerRadius = 15.0
+        
+        forgotPassword.tintColor = UIColor(red: 0.16, green: 0.67, blue: 0.89, alpha: 1)
+        criarConta_visual.tintColor = UIColor(red: 0.16, green: 0.67, blue: 0.89, alpha: 1)
+        
+        btnFBLogin.layer.cornerRadius = 10.0
+        
+//        funcao de login
+        let btnFBLogin = FBLoginButton(frame: CGRect(x: 37, y: 640, width: 340, height: 40))
         do {
             func loginButton(_ loginButton: FBLoginButton!, didCompleteWith result: LoginManagerLoginResult!, error: Error!) {
                 if let error = error {
@@ -59,7 +82,7 @@ class LoginView: UIViewController {
                         
                     } else {
                         
-                        print("não foi")
+//                        print("não foi")
                     }
                     
                     
@@ -72,33 +95,6 @@ class LoginView: UIViewController {
         }
     }
     
-//            Auth.auth().signIn(with: credential) { (authResult, error) in
-//                if let error = error {
-//                     print("erro")
-            
-//                    return
-//                }
-//                self.performSegue(withIdentifier: "loginToHome", sender: self)
-//            }
-            
-//            Auth.auth().signIn(with: credential) { (authResult, error) in
-//                if error == nil {
-//                    self.performSegue(withIdentifier: "loginToHome", sender: self)
-//                }
-//                else {
-//                }
-                // User is signed in
-                // ...
-
-    
-    
-    // Do any additional setup after loading the view.
-    
-  
-   // override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-       // self.view.endEditing(true)
-        
-
     @IBAction func LoginButton(_ sender: AnyObject) {
         do {
 
@@ -117,75 +113,22 @@ class LoginView: UIViewController {
 
         }
 
-
     }
 
     @IBAction func forgotPass(_ sender: Any) {
         
         let alert = UIAlertController(title: "Esqueceu a senha?", message: "Digite seu e-mail", preferredStyle: .alert)
         
-        alert.addTextField { (textfield) in
-            
-            
-            
+            alert.addTextField { (textfield) in
         }
-        alert.addAction(UIAlertAction(title: "Enviar", style: .default, handler: { action in
+            alert.addAction(UIAlertAction(title: "Enviar", style: .default, handler: { action in
             Auth.auth().sendPasswordReset(withEmail: alert.textFields?.first?.text ?? "") { error in
                 
             }
-           
 }
         ))
         self.present(alert, animated: true, completion: nil)
 
-
-    
-}
-    
-    
 }
 
-
-    
-    
-
-    
-
-
-    
-    
-    //func loginButton(_ loginButton: FBLoginButton, didCompleteWith result: LoginManagerLoginResult?, error: Error?) {
-   //     <#code#>
-    
-    
-    
-    
-    
-
-
-    
-    
-    
-    
-
-    
-    
-    
-
-
-/*@IBAction func loginAction(_ sender: Any)
- guard let email = self.emailText.text, let password = self.senhaText.text else {
- 
- return
- }
- Auth.auth().signIn(withEmail: email, password: password) { [weak self] user, error in
- guard let strongSelf = self else { return }
- 
- if let error = error {
- //strongSelf.showMessagePrompt(error.localizedDescription)
- return
- }
- strongSelf.navigationController?.popViewController(animated: true)
- }
- 
-*/
+}

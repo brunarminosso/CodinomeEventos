@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="TnS-Tb-OMG">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2rf-8J-Nt5">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -19,23 +19,23 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0AD-j0-dwR">
-                                <rect key="frame" x="39" y="455" width="337" height="30"/>
+                                <rect key="frame" x="37" y="454" width="340" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="p5w-rh-5Hc">
-                                <rect key="frame" x="39" y="509" width="337" height="30"/>
+                                <rect key="frame" x="37" y="507" width="340" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hgb-gA-jTN">
-                                <rect key="frame" x="39" y="583" width="337" height="41"/>
+                                <rect key="frame" x="37" y="583" width="340" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="entrar" backgroundImage="Rectangle">
+                                <state key="normal" title="entrar">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
@@ -43,7 +43,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FyF-6X-gdV">
-                                <rect key="frame" x="244" y="545" width="132" height="30"/>
+                                <rect key="frame" x="245" y="545" width="132" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="esqueceu a senha?"/>
                                 <connections>
@@ -59,9 +59,16 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OLz-Fu-P9l">
-                                <rect key="frame" x="39" y="380" width="76" height="21"/>
+                                <rect key="frame" x="37" y="361" width="125" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Please, login or create an account." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NcC-m4-U4i">
+                                <rect key="frame" x="37" y="408" width="223" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -71,7 +78,10 @@
                     </view>
                     <navigationItem key="navigationItem" id="xQf-BD-5mm"/>
                     <connections>
+                        <outlet property="botaoLogin_visual" destination="hgb-gA-jTN" id="vxE-VJ-99l"/>
+                        <outlet property="criarConta_visual" destination="R2G-hY-IXi" id="PCp-uZ-EON"/>
                         <outlet property="emailText" destination="0AD-j0-dwR" id="7OP-RW-4KH"/>
+                        <outlet property="forgotPassword" destination="FyF-6X-gdV" id="w6D-wm-Ubu"/>
                         <outlet property="senhaText" destination="p5w-rh-5Hc" id="MKp-g0-W2c"/>
                         <outlet property="welcomeLabel" destination="OLz-Fu-P9l" id="mSD-ur-gGy"/>
                         <segue destination="Vle-93-yuS" kind="show" identifier="loginToHome" id="4Ai-0g-KBv"/>
@@ -107,18 +117,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qRM-QG-tsM">
-                                <rect key="frame" x="39" y="756" width="337" height="41"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="41" id="n9B-LA-ws1"/>
-                                </constraints>
-                                <state key="normal" title="cadastrar" backgroundImage="Rectangle">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="botao_cadastrar:" destination="UGA-8F-Y2n" eventType="touchUpInside" id="euO-mD-1iE"/>
-                                </connections>
-                            </button>
                             <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="país" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bIx-3t-LlV">
                                 <rect key="frame" x="39" y="335" width="251" height="30"/>
                                 <nil key="textColor"/>
@@ -174,8 +172,8 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="nome completo" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Wdr-7L-ZlR">
-                                <rect key="frame" x="39" y="140" width="337" height="30"/>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="right" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="nome completo" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Wdr-7L-ZlR">
+                                <rect key="frame" x="25" y="140" width="337" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -188,23 +186,35 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qRM-QG-tsM">
+                                <rect key="frame" x="37" y="788" width="340" height="34"/>
+                                <state key="normal" title="cadastrar">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="botao_cadastrar:" destination="UGA-8F-Y2n" eventType="touchUpInside" id="euO-mD-1iE"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="XqL-SS-NKb" secondAttribute="bottom" constant="341" id="2Ev-aH-Z78"/>
+                            <constraint firstItem="qRM-QG-tsM" firstAttribute="leading" secondItem="qeM-vE-N6w" secondAttribute="leading" constant="37" id="8ZO-dB-tB0"/>
                             <constraint firstItem="K0h-x2-low" firstAttribute="top" secondItem="oVq-Pa-Y6A" secondAttribute="top" constant="335" id="JYO-JN-UP1"/>
                             <constraint firstItem="tx8-k9-t05" firstAttribute="top" secondItem="jBt-0Q-RoW" secondAttribute="bottom" constant="8" symbolic="YES" id="Nee-zi-UeY"/>
-                            <constraint firstItem="qeM-vE-N6w" firstAttribute="bottom" secondItem="qRM-QG-tsM" secondAttribute="bottom" constant="65" id="PgJ-cP-lgt"/>
                             <constraint firstItem="K0h-x2-low" firstAttribute="leading" secondItem="bIx-3t-LlV" secondAttribute="trailing" constant="8" symbolic="YES" id="aEj-O8-9uB"/>
                             <constraint firstItem="K0h-x2-low" firstAttribute="baseline" secondItem="bIx-3t-LlV" secondAttribute="baseline" id="gzh-tk-mKV"/>
+                            <constraint firstItem="qeM-vE-N6w" firstAttribute="trailing" secondItem="qRM-QG-tsM" secondAttribute="trailing" constant="37" id="iOi-yY-lwd"/>
                             <constraint firstItem="XqL-SS-NKb" firstAttribute="top" secondItem="v8z-a5-d80" secondAttribute="bottom" constant="8" symbolic="YES" id="kuP-rl-loz"/>
                             <constraint firstItem="SYv-Cz-Oex" firstAttribute="top" secondItem="tx8-k9-t05" secondAttribute="bottom" constant="8" id="lCu-Xg-5CR"/>
+                            <constraint firstItem="qeM-vE-N6w" firstAttribute="bottom" secondItem="qRM-QG-tsM" secondAttribute="bottom" constant="40" id="oRC-Qb-7EG"/>
                             <constraint firstItem="K0h-x2-low" firstAttribute="top" secondItem="SYv-Cz-Oex" secondAttribute="bottom" constant="51" id="tAr-n1-zYX"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="qeM-vE-N6w"/>
                     </view>
                     <navigationItem key="navigationItem" id="Hh9-sj-zTl"/>
                     <connections>
+                        <outlet property="botaoCadastrar" destination="qRM-QG-tsM" id="PTi-FB-JKo"/>
                         <outlet property="campo_bairro" destination="LJC-79-vTg" id="Fdn-Wa-27X"/>
                         <outlet property="campo_bloco" destination="eUy-BF-RaB" id="enP-32-Uyj"/>
                         <outlet property="campo_cep" destination="oZq-iH-drR" id="phn-VH-ga7"/>
@@ -1114,9 +1124,6 @@
             <point key="canvasLocation" x="2832" y="1331"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="Rectangle" width="344" height="48"/>
-    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="Dy7-pk-0LH"/>
     </inferredMetricsTieBreakers>
