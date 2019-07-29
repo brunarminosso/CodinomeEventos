@@ -12,6 +12,8 @@ import Firebase
 
 class CriarUsuariosViewController: UIViewController {
     
+
+    
     var ref: DatabaseReference! =  Database.database().reference()
 
     @IBOutlet weak var campo_nome: UITextField!
@@ -33,11 +35,14 @@ class CriarUsuariosViewController: UIViewController {
     
     
     override func viewDidLoad() {
+        
+        
        
        
     
         super.viewDidLoad()
-        
+        campo_senha.isSecureTextEntry = true
+        campo_senha_igual.isSecureTextEntry = true
         
         campo_nome.borderStyle = UITextField.BorderStyle.none
         campo_nome.layer.cornerRadius = 10.0
@@ -49,6 +54,7 @@ class CriarUsuariosViewController: UIViewController {
         
   // Do any additional setup after loading the view.
     }
+
     
     @IBAction func botao_cadastrar(_ sender: Any) {
         
@@ -63,14 +69,14 @@ class CriarUsuariosViewController: UIViewController {
             self.present(alertController, animated: true, completion: nil)
         } else {
             
+            self.ref.child("usuarios").childByAutoId().setValue(["nome_completo": campo_nome?.text, "e_mail": campo_email?.text, "pais": campo_pais?.text, "uf": campo_uf?.text, "cidade": campo_cidade?.text, "bairro": campo_bairro?.text, "cep": campo_cep?.text, "nome_da_rua": campo_rua?.text, "bloco": campo_bloco?.text, "numero": campo_numero?.text, "telefone": campo_telefone?.text])
+           
             
-          self.ref.child("usuarios").child("user_id").setValue(["bloco": campo_bloco.text])
-          
             Auth.auth().createUser(withEmail: campo_email.text ?? "", password: campo_senha.text ?? "") { authResult, error in
             
-            
         }
-        
+            
+        self.performSegue(withIdentifier: "cadastrotohome", sender: self)
         
         
         
