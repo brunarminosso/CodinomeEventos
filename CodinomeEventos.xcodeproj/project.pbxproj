@@ -17,6 +17,7 @@
 		E53AD41A22E5F71D00ED5CA7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E53AD41922E5F71D00ED5CA7 /* GoogleService-Info.plist */; };
 		E566A0A022E6151200C11330 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E566A09F22E6151200C11330 /* LoginView.swift */; };
 		FE01CB4522EB6A4000505186 /* CriarUsuariosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE01CB4422EB6A4000505186 /* CriarUsuariosViewController.swift */; };
+		FE15DBC722EF16AB003B6711 /* ListaDeEventosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE15DBC622EF16AB003B6711 /* ListaDeEventosViewController.swift */; };
 		FE5C801A22E9F090003DA454 /* CriarEventosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5C801922E9F090003DA454 /* CriarEventosViewController.swift */; };
 		FE5C801C22EA056F003DA454 /* AvaliarFornecedorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5C801B22EA056F003DA454 /* AvaliarFornecedorViewController.swift */; };
 		FE5C801E22EA0905003DA454 /* RatingPontualidade.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5C801D22EA0905003DA454 /* RatingPontualidade.swift */; };
@@ -46,6 +47,7 @@
 		E53AD41922E5F71D00ED5CA7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E566A09F22E6151200C11330 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		FE01CB4422EB6A4000505186 /* CriarUsuariosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CriarUsuariosViewController.swift; sourceTree = "<group>"; };
+		FE15DBC622EF16AB003B6711 /* ListaDeEventosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaDeEventosViewController.swift; sourceTree = "<group>"; };
 		FE5C801922E9F090003DA454 /* CriarEventosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CriarEventosViewController.swift; sourceTree = "<group>"; };
 		FE5C801B22EA056F003DA454 /* AvaliarFornecedorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvaliarFornecedorViewController.swift; sourceTree = "<group>"; };
 		FE5C801D22EA0905003DA454 /* RatingPontualidade.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingPontualidade.swift; sourceTree = "<group>"; };
@@ -135,6 +137,7 @@
 				FE5C801922E9F090003DA454 /* CriarEventosViewController.swift */,
 				FE5C801B22EA056F003DA454 /* AvaliarFornecedorViewController.swift */,
 				FE01CB4422EB6A4000505186 /* CriarUsuariosViewController.swift */,
+				FE15DBC622EF16AB003B6711 /* ListaDeEventosViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -276,6 +279,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE15DBC722EF16AB003B6711 /* ListaDeEventosViewController.swift in Sources */,
 				FE79EDB322E63105007833A2 /* FornecedoresTableViewCell.swift in Sources */,
 				FE9915A122E790010094472A /* DetalhesFornecedorViewController.swift in Sources */,
 				FE79EDB522E63786007833A2 /* PesquisaViewController.swift in Sources */,
