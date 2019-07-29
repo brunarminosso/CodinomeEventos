@@ -58,6 +58,13 @@
                                     <segue destination="UGA-8F-Y2n" kind="show" id="qdo-0g-0w3"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OLz-Fu-P9l">
+                                <rect key="frame" x="39" y="380" width="76" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -66,12 +73,13 @@
                     <connections>
                         <outlet property="emailText" destination="0AD-j0-dwR" id="7OP-RW-4KH"/>
                         <outlet property="senhaText" destination="p5w-rh-5Hc" id="MKp-g0-W2c"/>
+                        <outlet property="welcomeLabel" destination="OLz-Fu-P9l" id="mSD-ur-gGy"/>
                         <segue destination="Vle-93-yuS" kind="show" identifier="loginToHome" id="4Ai-0g-KBv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-564" y="-154"/>
+            <point key="canvasLocation" x="-565.21739130434787" y="-154.01785714285714"/>
         </scene>
         <!--Criar Usuarios View Controller-->
         <scene sceneID="GRg-5M-tfJ">
@@ -505,7 +513,7 @@
         <!--home (meus eventos)-->
         <scene sceneID="lJ1-nc-UOm">
             <objects>
-                <viewController title="home (meus eventos)" id="E30-fR-rYj" sceneMemberID="viewController">
+                <viewController title="home (meus eventos)" id="E30-fR-rYj" customClass="ListaDeEventosViewController" customModule="CodinomeEventos" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dcg-Pl-0tc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -597,23 +605,18 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Proximos Eventos"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="axi-Yd-hve">
-                                <rect key="frame" x="239" y="112" width="155" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="CRIAR EVENTO TESTE"/>
-                                <connections>
-                                    <segue destination="MFa-wy-q3W" kind="show" id="fBR-ib-eVD"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="u6d-m8-OJL"/>
                     </view>
                     <navigationItem key="navigationItem" id="NIW-IT-DJm"/>
+                    <connections>
+                        <outlet property="tableView" destination="kfd-cl-ph0" id="crN-yo-Zip"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mSS-qE-EVW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2007" y="-1615"/>
+            <point key="canvasLocation" x="2005.7971014492755" y="-1615.1785714285713"/>
         </scene>
         <!--criaçao de novo evento-->
         <scene sceneID="r0T-bf-fO8">
@@ -709,20 +712,12 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="nome_do_evento" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ELK-Kh-X86">
-                                <rect key="frame" x="26" y="499" width="128" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="osI-6O-Qgz"/>
                     </view>
                     <connections>
                         <outlet property="campoNomeEvento" destination="KGd-eH-D8U" id="Dkz-LN-uXO"/>
-                        <outlet property="nomeDoEventoLabel" destination="ELK-Kh-X86" id="nic-SW-0A5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k7R-od-aH3" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -742,7 +737,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BUO-qG-oXP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2887" y="-2281"/>
+            <point key="canvasLocation" x="3684" y="-1615"/>
         </scene>
         <!--lista de fornecedores-->
         <scene sceneID="1WZ-0B-Kuj">

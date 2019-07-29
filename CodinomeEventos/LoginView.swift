@@ -32,10 +32,13 @@ class LoginView: UIViewController {
     
     let btnFBLogin = FBLoginButton()
     
+    @IBOutlet weak var welcomeLabel: UILabel!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        welcomeLabel.font = UIFont(name: "Lato-SemiBold", size: 28)
+        welcomeLabel.textColor = UIColor(red: 0.39, green: 0.2, blue: 0.54, alpha: 1)
         senhaText.isSecureTextEntry = true
         let btnFBLogin = FBLoginButton(frame: CGRect(x: 100, y: 100, width: 100, height: 20))
         do {

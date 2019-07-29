@@ -20,7 +20,7 @@ struct Fornecedor: Codable {
     let estado: String
     let telefone_fixo: String
     let celular: String
-    var categoria: String
+    let categoria: String
 //    let nota_avaliacao_media: Double
 //    let descricao: String
 //    let avaliacao_texto1: String
