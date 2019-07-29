@@ -44,7 +44,7 @@ class CriarUsuariosViewController: UIViewController {
         campo_nome.layer.borderWidth = 1.0
         campo_nome.layer.borderColor = UIColor.gray.cgColor
         
-        campo_nome.layer.borderColor = UIColor(red: 0.39, green: 0.2, blue: 0.54, alpha: 0.22).cgColor
+//        campo_nome.layer.borderColor = UIColor(red: 0.39, green: 0.2, blue: 0.54, alpha: 0.22).cgColor
         
         
   // Do any additional setup after loading the view.

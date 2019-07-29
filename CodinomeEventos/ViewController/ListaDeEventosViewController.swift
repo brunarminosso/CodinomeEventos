@@ -7,27 +7,48 @@
 //
 
 import UIKit
+import Firebase
 
-struct Eventos: Codable {
-    let date: String
-    let name: String
-    let numberOfGuests: Int
-    let totalBudget: Double
-    let type: String
+//struct Eventos: Codable {
+//    let name: String
+//    let date: String
+//    let numberOfGuests: Int
+//    let totalBudget: Double
+//    let type: String
+//
+//    enum CodingKeys: String, CodingKey {
+//        case name = "name"
+//        case date = "date"
+//        case numberOfGuests = "numberOfGuests"
+//        case totalBudget = "totalBudget"
+//        case type = "type"
+//    }
+//}
+
+class ListaDeEventosViewController: UIViewController, UITableViewDataSource, UITableViewDelegate{
     
-    enum CodingKeys: String, CodingKey {
-        case date = "date"
-        case name = "name"
-        case numberOfGuests = "numberOfGuests"
-        case totalBudget = "totalBudget"
-        case type = "type"
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ListaEventos") as? EventoCriadoTableViewCell
+    
+        cell?.labelNomeDoEvento_ListaEventos.text = listaEventos["0"] as! String
+        
+        return cell!
+        
     }
-}
-
-class ListaDeEventosViewController: UIViewController {
-    var listaEventos = [Eventos]()
+    
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return tamanhoArray
+    }
     
     @IBOutlet weak var tableView: UITableView!
+    
+    var ref: DatabaseReference! =  Database.database().reference()
+   
+    var tamanhoArray: Int = 0
+    
+    var listaEventos: [String: Any] = [:]
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,28 +58,19 @@ class ListaDeEventosViewController: UIViewController {
     }
     func getdata() {
         
-        let jsonUrlString = "https://eventei-fa316.firebaseio.com/eventos/0/"
-        
-        print("linha 41")
-        guard let url = URL(string: jsonUrlString) else {return}
-        
-        URLSession.shared.dataTask(with: url){ (data, response, err) in
-            
-            guard let data = data else {return}
-            
-            do {
-                let dados = try JSONDecoder().decode([Eventos].self, from: data)
-                
+        ref.child("eventos").observe(.value, with: { (snapshot) in
+            if let dicionario = snapshot.value as? [String: Any] {
+                self.tamanhoArray = dicionario.count
+                self.listaEventos = dicionario
                 DispatchQueue.main.async {
-                    self.listaEventos = dados
                     self.tableView.reloadData()
-                    print("Numero de rows: ",self.listaEventos.count)
                 }
+                print("tamanho array:", self.listaEventos.count)
+                print(dicionario)
+                print(dicionario.randomElement())
                 
-            } catch let jsonErr{
-                print("Error serializating JSON", jsonErr)
             }
-            }.resume()
+        })
+        
     }
-
 }

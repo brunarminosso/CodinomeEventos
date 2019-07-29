@@ -10,6 +10,8 @@ import UIKit
 
 class EventoCriadoTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var labelNomeDoEvento_ListaEventos: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
