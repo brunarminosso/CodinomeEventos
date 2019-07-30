@@ -16,7 +16,27 @@ import FacebookCore
 import FacebookLogin
 
 @objc(LoginView)
-class LoginView: UIViewController {
+class LoginView: UIViewController, LoginButtonDelegate {
+    func loginButton(_ loginButton: FBLoginButton, didCompleteWith result: LoginManagerLoginResult?, error: Error?) {
+        if let error = error {
+            print(error.localizedDescription)
+            return
+        }
+        
+        let credential = FacebookAuthProvider.credential(withAccessToken: AccessToken.current!.tokenString)
+        Auth.auth().signIn(with: credential) { (authResult, error) in
+            if error == nil {
+                
+                self.performSegue(withIdentifier: "loginToHome", sender: self)
+            } else {
+                
+            }
+    }
+    }
+    func loginButtonDidLogOut(_ loginButton: FBLoginButton) {
+        print("lol")
+    }
+    
 
     @IBOutlet weak var emailText: UITextField!
     
@@ -65,27 +85,13 @@ class LoginView: UIViewController {
         
 //        funcao de login
         let btnFBLogin = FBLoginButton(frame: CGRect(x: 37, y: 640, width: 340, height: 40))
+            btnFBLogin.layer.cornerRadius = 10.0
+            btnFBLogin.layer.masksToBounds = true
         
-        do {
-            func loginButton(_ loginButton: FBLoginButton!, didCompleteWith result: LoginManagerLoginResult!, error: Error!) {
-                if let error = error {
-                    print(error.localizedDescription)
-                    return
-                }
-                
-                let credential = FacebookAuthProvider.credential(withAccessToken: AccessToken.current!.tokenString)
-                Auth.auth().signIn(with: credential) { (authResult, error) in
-                    if error != nil {
-                        
-                        self.performSegue(withIdentifier: "loginToHome", sender: self)
-                    } else {
-                        
-                    }
-                }
-            }
-            
+        btnFBLogin.delegate = self
+        
             self.view.addSubview(btnFBLogin)
-        }
+        
     }
     @IBAction func LoginButton(_ sender: AnyObject) {
         do {
