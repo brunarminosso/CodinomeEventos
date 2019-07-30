@@ -9,21 +9,6 @@
 import UIKit
 import Firebase
 
-//struct Eventos: Codable {
-//    let name: String
-//    let date: String
-//    let numberOfGuests: Int
-//    let totalBudget: Double
-//    let type: String
-//
-//    enum CodingKeys: String, CodingKey {
-//        case name = "name"
-//        case date = "date"
-//        case numberOfGuests = "numberOfGuests"
-//        case totalBudget = "totalBudget"
-//        case type = "type"
-//    }
-//}
 
 class ListaDeEventosViewController: UIViewController, UITableViewDataSource, UITableViewDelegate{
     

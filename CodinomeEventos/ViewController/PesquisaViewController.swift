@@ -36,6 +36,11 @@ class PesquisaViewController: UIViewController, UITableViewDataSource, UITableVi
         return cell!
     }
     
+//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//
+//    }
+    
+    
     var tituloBotao: String!
     
     @IBOutlet weak var tableView: UITableView!
@@ -49,14 +54,14 @@ class PesquisaViewController: UIViewController, UITableViewDataSource, UITableVi
     
     }
     
-    @IBAction func buttonPress(_ sender: UIButton) {
-        tituloBotao = sender.titleLabel?.text ?? ""
-        performSegue(withIdentifier: "segueLista", sender: nil)
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let destination = segue.destination as? ListaDeFornecedoresViewController
-        destination?.filtro = tituloBotao
-    }
+//    @IBAction func buttonPress(_ sender: UIButton) {
+//        tituloBotao = sender.titleLabel?.text ?? ""
+//        performSegue(withIdentifier: "segueLista", sender: nil)
+//    }
+//
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        let destination = segue.destination as? ListaDeFornecedoresViewController
+//        destination?.filtro = tituloBotao
+//    }
 }
 

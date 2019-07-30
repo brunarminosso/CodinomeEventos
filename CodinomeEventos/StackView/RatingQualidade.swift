@@ -76,10 +76,15 @@ protocol RatingQualidadeDelegate: class {
         }
         ratingQualidadeButtons.removeAll()
         
+        let bundle = Bundle(for: type(of: self))
+        
+        let estrelaCheia = UIImage(named: "estrela_cheia", in: bundle, compatibleWith: self.traitCollection)
+        let estrelaVazia = UIImage(named: "estrela_vazia", in: bundle, compatibleWith: self.traitCollection)
         
         for _ in 0..<QualidadeCount {
             let button = UIButton()
-            button.backgroundColor = UIColor.green
+            button.setImage(estrelaVazia, for: .normal)
+            button.setImage(estrelaCheia, for: .selected)
             
             button.translatesAutoresizingMaskIntoConstraints = false
             button.heightAnchor.constraint(equalToConstant: QualidadeSize.height).isActive = true
