@@ -13,31 +13,63 @@ class CriarEventosViewController: UIViewController {
     
     var ref: DatabaseReference! = Database.database().reference()
 
-    @IBOutlet weak var campoNomeEvento: UITextField!
+   
+    @IBOutlet weak var nome_evento: UITextField!
+    @IBOutlet weak var data_evento: UITextField!
+    @IBOutlet weak var tipo_evento: UITextField!
+    @IBOutlet weak var orc_evento: UITextField!
+    @IBOutlet weak var convidados_eventos: UITextField!
+    @IBOutlet weak var botaogravar: UIButton!
     
-    @IBOutlet weak var nomeDoEventoLabel: UILabel!
+    
+    
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        campoNomeEvento.placeholder = "Nome do seu evento"
+        let raio = CGFloat(10.0)
+        let borderWidth = CGFloat(1.0)
         
+        nome_evento.borderStyle = UITextField.BorderStyle.none
+        nome_evento.layer.borderColor = UIColor(red: 0.39, green: 0.2, blue: 0.54, alpha: 1).cgColor
+        nome_evento.layer.cornerRadius = raio
+       nome_evento.layer.borderWidth = borderWidth
         
-        ref.child("eventos/0/name").observe(.value, with: { (snapshot) in
-            let value = snapshot.value as? NSDictionary
-            let nome_evento = value?["name"] as? String ?? ""
-            self.nomeDoEventoLabel.text = nome_evento 
-            
-        })
-        // Do any additional setup after loading the view.
+        data_evento.borderStyle = UITextField.BorderStyle.none
+        data_evento.layer.borderColor = UIColor(red: 0.39, green: 0.2, blue: 0.54, alpha: 1).cgColor
+       data_evento.layer.cornerRadius = raio
+        data_evento.layer.borderWidth = borderWidth
+        
+       tipo_evento.borderStyle = UITextField.BorderStyle.none
+       tipo_evento.isSecureTextEntry = true
+        tipo_evento.layer.borderColor = UIColor(red: 0.39, green: 0.2, blue: 0.54, alpha: 1).cgColor
+        tipo_evento.layer.cornerRadius = raio
+        tipo_evento.layer.borderWidth = borderWidth
+        
+        orc_evento.borderStyle = UITextField.BorderStyle.none
+       orc_evento.isSecureTextEntry = true
+       orc_evento.layer.borderColor = UIColor(red: 0.39, green: 0.2, blue: 0.54, alpha: 1).cgColor
+        orc_evento.layer.cornerRadius = raio
+        orc_evento.layer.borderWidth = borderWidth
+        
+        convidados_eventos.borderStyle = UITextField.BorderStyle.none
+        convidados_eventos.layer.borderColor = UIColor(red: 0.39, green: 0.2, blue: 0.54, alpha: 1).cgColor
+       convidados_eventos.layer.cornerRadius = raio
+        convidados_eventos.layer.borderWidth = borderWidth
+        
+        botaogravar.layer.backgroundColor = UIColor(red: 0.39, green: 0.2, blue: 0.54, alpha: 1).cgColor
+        botaogravar.layer.cornerRadius = raio
+    
         
     }
-    
-    
-    
-    @IBAction func buttonGravar(_ sender: Any) {
         
-        self.ref.child("eventos/0/name").setValue(campoNomeEvento.text as? NSString)
-//        print("executou o action do botao")
+        
+    @IBAction func botao_gravar(_ sender: Any) {
+        self.ref.child("eventos").childByAutoId().setValue(["name": nome_evento?.text, "date": data_evento?.text, "type": tipo_evento?.text, "numberOfGuests": convidados_eventos?.text, "totalBudget": orc_evento?.text])
+        
+        
     }
-    
+        
+
 }
