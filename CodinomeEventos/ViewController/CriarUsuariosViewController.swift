@@ -31,58 +31,83 @@ class CriarUsuariosViewController: UIViewController {
     @IBOutlet weak var campo_bloco: UITextField!
     @IBOutlet weak var botaoCadastrar: UIButton!
     
-    
-    
     override func viewDidLoad() {
 
         super.viewDidLoad()
+        let raio = CGFloat(10.0)
+        let borderWidth = CGFloat(1.0)
+        
         campo_nome.borderStyle = UITextField.BorderStyle.none
         campo_nome.placeholder = "  " + "nome completo"
-        campo_nome.text = "  "
         campo_nome.layer.borderColor = UIColor(red: 0.39, green: 0.2, blue: 0.54, alpha: 1).cgColor
-        campo_nome.layer.cornerRadius = 15.0
-        campo_nome.layer.borderWidth = 1.0
+        campo_nome.layer.cornerRadius = raio
+        campo_nome.layer.borderWidth = borderWidth
         
-        campo_email.layer.backgroundColor = UIColor(red: 0.39, green: 0.2, blue: 0.54, alpha: 1).cgColor
-        campo_email.layer.cornerRadius = 15.0
+        campo_email.borderStyle = UITextField.BorderStyle.none
+        campo_email.layer.borderColor = UIColor(red: 0.39, green: 0.2, blue: 0.54, alpha: 1).cgColor
+        campo_email.layer.cornerRadius = raio
+        campo_email.layer.borderWidth = borderWidth
         
+        campo_senha.borderStyle = UITextField.BorderStyle.none
         campo_senha.isSecureTextEntry = true
-        campo_senha.layer.backgroundColor = UIColor(red: 0.39, green: 0.2, blue: 0.54, alpha: 1).cgColor
-        campo_senha.layer.cornerRadius = 15.0
+        campo_senha.layer.borderColor = UIColor(red: 0.39, green: 0.2, blue: 0.54, alpha: 1).cgColor
+        campo_senha.layer.cornerRadius = raio
+        campo_senha.layer.borderWidth = borderWidth
         
+        campo_senha_igual.borderStyle = UITextField.BorderStyle.none
         campo_senha_igual.isSecureTextEntry = true
-        campo_senha_igual.layer.backgroundColor = UIColor(red: 0.39, green: 0.2, blue: 0.54, alpha: 1).cgColor
-        campo_senha_igual.layer.cornerRadius = 15.0
+        campo_senha_igual.layer.borderColor = UIColor(red: 0.39, green: 0.2, blue: 0.54, alpha: 1).cgColor
+        campo_senha_igual.layer.cornerRadius = raio
+        campo_senha_igual.layer.borderWidth = borderWidth
         
-        campo_pais.layer.backgroundColor = UIColor(red: 0.39, green: 0.2, blue: 0.54, alpha: 1).cgColor
-        campo_pais.layer.cornerRadius = 15.0
+        campo_pais.borderStyle = UITextField.BorderStyle.none
+        campo_pais.layer.borderColor = UIColor(red: 0.39, green: 0.2, blue: 0.54, alpha: 1).cgColor
+        campo_pais.layer.cornerRadius = raio
+        campo_pais.layer.borderWidth = borderWidth
         
-        campo_uf.layer.backgroundColor = UIColor(red: 0.39, green: 0.2, blue: 0.54, alpha: 1).cgColor
-        campo_uf.layer.cornerRadius = 15.0
+        campo_uf.borderStyle = UITextField.BorderStyle.none
+        campo_uf.layer.borderColor = UIColor(red: 0.39, green: 0.2, blue: 0.54, alpha: 1).cgColor
+        campo_uf.layer.cornerRadius = raio
+        campo_uf.layer.borderWidth = borderWidth
         
-        campo_cidade.layer.backgroundColor = UIColor(red: 0.39, green: 0.2, blue: 0.54, alpha: 1).cgColor
-        campo_cidade.layer.cornerRadius = 15.0
         
-        campo_bairro.layer.backgroundColor = UIColor(red: 0.39, green: 0.2, blue: 0.54, alpha: 1).cgColor
-        campo_bairro.layer.cornerRadius = 15.0
+        campo_cidade.borderStyle = UITextField.BorderStyle.none
+        campo_cidade.layer.borderColor = UIColor(red: 0.39, green: 0.2, blue: 0.54, alpha: 1).cgColor
+        campo_cidade.layer.cornerRadius = raio
+        campo_cidade.layer.borderWidth = borderWidth
         
-        campo_cep.layer.backgroundColor = UIColor(red: 0.39, green: 0.2, blue: 0.54, alpha: 1).cgColor
-        campo_cep.layer.cornerRadius = 15.0
+        campo_bairro.borderStyle = UITextField.BorderStyle.none
+        campo_bairro.layer.borderColor = UIColor(red: 0.39, green: 0.2, blue: 0.54, alpha: 1).cgColor
+        campo_bairro.layer.cornerRadius = raio
+        campo_bairro.layer.borderWidth = borderWidth
         
-        campo_rua.layer.backgroundColor = UIColor(red: 0.39, green: 0.2, blue: 0.54, alpha: 1).cgColor
-        campo_rua.layer.cornerRadius = 15.0
+        campo_cep.borderStyle = UITextField.BorderStyle.none
+        campo_cep.layer.borderColor = UIColor(red: 0.39, green: 0.2, blue: 0.54, alpha: 1).cgColor
+        campo_cep.layer.cornerRadius = raio
+        campo_cep.layer.borderWidth = borderWidth
         
-        campo_numero.layer.backgroundColor = UIColor(red: 0.39, green: 0.2, blue: 0.54, alpha: 1).cgColor
-        campo_numero.layer.cornerRadius = 15.0
+        campo_rua.borderStyle = UITextField.BorderStyle.none
+        campo_rua.layer.borderColor = UIColor(red: 0.39, green: 0.2, blue: 0.54, alpha: 1).cgColor
+        campo_rua.layer.cornerRadius = raio
+        campo_rua.layer.borderWidth = borderWidth
         
-        campo_telefone.layer.backgroundColor = UIColor(red: 0.39, green: 0.2, blue: 0.54, alpha: 1).cgColor
-        campo_telefone.layer.cornerRadius = 15.0
+        campo_numero.borderStyle = UITextField.BorderStyle.none
+        campo_numero.layer.borderColor = UIColor(red: 0.39, green: 0.2, blue: 0.54, alpha: 1).cgColor
+        campo_numero.layer.cornerRadius = raio
+        campo_numero.layer.borderWidth = borderWidth
         
-        campo_bloco.layer.backgroundColor = UIColor(red: 0.39, green: 0.2, blue: 0.54, alpha: 1).cgColor
-        campo_bloco.layer.cornerRadius = 15.0
+        campo_telefone.borderStyle = UITextField.BorderStyle.none
+        campo_telefone.layer.borderColor = UIColor(red: 0.39, green: 0.2, blue: 0.54, alpha: 1).cgColor
+        campo_telefone.layer.cornerRadius = raio
+        campo_telefone.layer.borderWidth = borderWidth
+        
+        campo_bloco.borderStyle = UITextField.BorderStyle.none
+        campo_bloco.layer.borderColor = UIColor(red: 0.39, green: 0.2, blue: 0.54, alpha: 1).cgColor
+        campo_bloco.layer.cornerRadius = raio
+        campo_bloco.layer.borderWidth = borderWidth
         
         botaoCadastrar.layer.backgroundColor = UIColor(red: 0.39, green: 0.2, blue: 0.54, alpha: 1).cgColor
-        botaoCadastrar.layer.cornerRadius = 15.0
+        botaoCadastrar.layer.cornerRadius = raio
         
 
     }
