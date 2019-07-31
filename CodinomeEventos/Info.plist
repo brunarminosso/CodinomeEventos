@@ -4,13 +4,13 @@
 <dict>
 	<key>UIAppFonts</key>
 	<array>
+		<string>Lato-Regular.ttf</string>
 		<string>Lato-Bold.ttf</string>
 		<string>Lato-Light.ttf</string>
-		<string>Lato-Medium.ttf</string>
-		<string>Lato-Regular.ttf</string>
+		<string>Lato-Black.ttf</string>
 		<string>Lato-Semibold.ttf</string>
 		<string>Lato-Thin.ttf</string>
-		<string>Lato-Black.ttf</string>
+		<string>Lato-Medium.ttf</string>
 	</array>
 	<key>CFBundleURLTypes</key>
 	<array>

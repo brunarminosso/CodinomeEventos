@@ -76,10 +76,15 @@ protocol RatingPontualidadeDelegate: class {
         }
         ratingPontualidadeButtons.removeAll()
         
+        let bundle = Bundle(for: type(of: self))
+        
+        let estrelaCheia = UIImage(named: "estrela_cheia", in: bundle, compatibleWith: self.traitCollection)
+        let estrelaVazia = UIImage(named: "estrela_vazia", in: bundle, compatibleWith: self.traitCollection)
         
         for _ in 0..<pontulidadeCount {
             let button = UIButton()
-            button.backgroundColor = UIColor.yellow
+            button.setImage(estrelaVazia, for: .normal)
+            button.setImage(estrelaCheia, for: .selected)
             
             button.translatesAutoresizingMaskIntoConstraints = false
             button.heightAnchor.constraint(equalToConstant: pontualidadeSize.height).isActive = true

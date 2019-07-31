@@ -11,7 +11,6 @@ import UIKit
 struct Fornecedor: Codable {
     let nome : String
     let email: String
-    let senha: String
     let cep: String
     let endereco: String
     let numero: Double
@@ -21,17 +20,16 @@ struct Fornecedor: Codable {
     let telefone_fixo: String
     let celular: String
     let categoria: String
-//    let nota_avaliacao_media: Double
-//    let descricao: String
-//    let avaliacao_texto1: String
-//    let avaliacao_qualidade_media: Double
-//    let avaliacao_pontualidade_media: Double
-//    let avaliacao_preco_media: Double
+    let nota_avaliacao_media: Double
+    let descricao: String
+    let avaliacao_qualidade_media: Double
+    let avaliacao_pontualidade_media: Double
+    let avaliacao_preco_media: Double
+//    let avaliacoes: Avaliacoes
     
     enum CondingKeys: String, CodingKey  {
         case nome = "nome"
         case email = "email"
-        case senha = "senha"
         case cep = "cep"
         case endereco = "endereco"
         case numero = "numero"
@@ -41,12 +39,26 @@ struct Fornecedor: Codable {
         case telefone_fixo = "telefone_fixo"
         case celular = "celular"
         case categoria = "categoria"
-//        case nota_avaliacao_media = "nota_avaliacao_media"
-//        case descricao = "descricao"
-//        case avaliacao_texto1 = "avaliacao_texto1"
-//        case avaliacao_qualidade_media = "avaliacao_qualidade_media"
-//        case avaliacao_pontualidade_media = "avaliacao_pontualidade_media"
-//        case avaliacao_preco_media = "avaliacao_preco_media"
+        case nota_avaliacao_media = "nota_avaliacao_media"
+        case descricao = "descricao"
+        case avaliacao_qualidade_media = "avaliacao_qualidade_media"
+        case avaliacao_pontualidade_media = "avaliacao_pontualidade_media"
+        case avaliacao_preco_media = "avaliacao_preco_media"
+//        case avaliacoes = "avaliacoes"
+    }
+}
+
+struct Avaliacoes: Decodable {
+    let nome_avaliador: String
+    let foto_avaliador: String
+    let nota: Double
+    let texto_aval: String
+    
+    enum CodingKeys: String, CodingKey {
+        case nome_avaliador = "nome_avaliador"
+        case foto_avaliador = "foto_avaliador"
+        case nota = "nota"
+        case texto_aval = "texto_aval"
     }
 }
 
