@@ -11,12 +11,42 @@ import UIKit
 class EventoCriadoTableViewCell: UITableViewCell {
 
     @IBOutlet weak var labelNomeDoEvento_ListaEventos: UILabel!
-    
+
+    @IBOutlet weak var convidados_ListaEventos: UILabel!
+
+    @IBOutlet weak var orc_ListaEventos: UILabel!
+
+
+    @IBOutlet weak var dia_ListaEventos: UILabel!
+
+    @IBOutlet weak var mes_ListaEventos: UILabel!
+
+    @IBOutlet weak var moldura_evento: UIView!
+//
+//
+//
+//
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-    }
 
+
+    moldura_evento.layer.masksToBounds = true
+    moldura_evento.layer.cornerRadius = 10.0
+    moldura_evento.layer.borderWidth = 0
+    moldura_evento.layer.shadowRadius = 4
+    moldura_evento.layer.shadowColor = UIColor.black.cgColor
+    moldura_evento.layer.shadowOffset = CGSize(width: 0, height: 4)
+    moldura_evento.layer.shadowOpacity = 0.23
+    moldura_evento.layer.borderColor = UIColor.lightGray.cgColor
+        
+        
+        
+    //
+    }
+    
+    
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
