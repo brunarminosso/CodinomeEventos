@@ -8,26 +8,22 @@
 
 import UIKit
 
-struct Fornecedor: Codable {
-    let nome : String
-    let email: String
-    let cep: String
-    let endereco: String
-    let numero: Double
+// MARK: - Fornecedore
+struct Fornecedores: Codable {
+    let nome, email, cep, endereco: String
+    let numero: Int
     let bairro: String
     let cidade: String
     let estado: String
-    let telefone_fixo: String
-    let celular: String
+    let telefoneFixo, celular: String
     let categoria: String
-    let nota_avaliacao_media: Double
+    let notaAvaliacaoMedia: Double
     let descricao: String
-    let avaliacao_qualidade_media: Double
-    let avaliacao_pontualidade_media: Double
-    let avaliacao_preco_media: Double
-//    let avaliacoes: Avaliacoes
+    let avaliacaoQualidadeMedia: Double
+    let avaliacaoPontualidadeMedia, avaliacaoPrecoMedia: Int
+    let avaliacoes: [Avaliacoe]
     
-    enum CondingKeys: String, CodingKey  {
+    enum CodingKeys: String, CodingKey {
         case nome = "nome"
         case email = "email"
         case cep = "cep"
@@ -36,29 +32,30 @@ struct Fornecedor: Codable {
         case bairro = "bairro"
         case cidade = "cidade"
         case estado = "estado"
-        case telefone_fixo = "telefone_fixo"
+        case telefoneFixo = "telefone_fixo"
         case celular = "celular"
         case categoria = "categoria"
-        case nota_avaliacao_media = "nota_avaliacao_media"
+        case notaAvaliacaoMedia = "nota_avaliacao_media"
         case descricao = "descricao"
-        case avaliacao_qualidade_media = "avaliacao_qualidade_media"
-        case avaliacao_pontualidade_media = "avaliacao_pontualidade_media"
-        case avaliacao_preco_media = "avaliacao_preco_media"
-//        case avaliacoes = "avaliacoes"
+        case avaliacaoQualidadeMedia = "avaliacao_qualidade_media"
+        case avaliacaoPontualidadeMedia = "avaliacao_pontualidade_media"
+        case avaliacaoPrecoMedia = "avaliacao_preco_media"
+        case avaliacoes
     }
 }
 
-struct Avaliacoes: Decodable {
-    let nome_avaliador: String
-    let foto_avaliador: String
-    let nota: Double
-    let texto_aval: String
+// MARK: - Avaliacoe
+struct Avaliacoe: Codable {
+    let nomeAvaliador: String
+    let fotoAvaliador: String
+    let nota: Int
+    let textoAval: String
     
     enum CodingKeys: String, CodingKey {
-        case nome_avaliador = "nome_avaliador"
-        case foto_avaliador = "foto_avaliador"
+        case nomeAvaliador = "nome_avaliador"
+        case fotoAvaliador = "foto_avaliador"
         case nota = "nota"
-        case texto_aval = "texto_aval"
+        case textoAval = "texto_aval"
     }
 }
 
@@ -80,7 +77,7 @@ class ListaDeFornecedoresViewController: UIViewController, UITableViewDataSource
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ListaFornecedores") as? FornecedoresTableViewCell
         
-        let fornecedor: Fornecedor
+        let fornecedor: Fornecedores
         
         if isFiltering() {
             fornecedor = fornecedorFiltrado[indexPath.row]
@@ -91,13 +88,12 @@ class ListaDeFornecedoresViewController: UIViewController, UITableViewDataSource
         cell?.ListaFornecedores_nomeFornecedor.text = fornecedor.nome
         cell?.ListaFornecedores_endereco.text = fornecedor.bairro
         cell?.ListaFornecedores_Categoria.text = fornecedor.categoria
-        cell?.ListaFornecedores_ImagemFornecedor.image = UIImage(named: "confeitaria")
         
         return cell!
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let fornecedor: Fornecedor
+        let fornecedor: Fornecedores
         
         if isFiltering(){
             fornecedor = fornecedorFiltrado[indexPath.row]
@@ -108,9 +104,9 @@ class ListaDeFornecedoresViewController: UIViewController, UITableViewDataSource
         performSegue(withIdentifier: "segueDetalhesFornecedor", sender: fornecedor)
     }
     
-    var listaFornecedores = [Fornecedor]()
+    var listaFornecedores = [Fornecedores]()
     var filtro: String = ""
-    var fornecedorFiltrado = [Fornecedor]()
+    var fornecedorFiltrado = [Fornecedores]()
 //    declaracao da search bar
     let searchController = UISearchController(searchResultsController: nil)
     
@@ -126,6 +122,9 @@ class ListaDeFornecedoresViewController: UIViewController, UITableViewDataSource
     
     @IBOutlet weak var tableView: UITableView!
     
+    @IBOutlet weak var categoria_Label: UILabel!
+    
+    
     override func viewDidLoad() {
         
         super.viewDidLoad()
@@ -136,15 +135,20 @@ class ListaDeFornecedoresViewController: UIViewController, UITableViewDataSource
         searchController.searchResultsUpdater = self
         searchController.obscuresBackgroundDuringPresentation = false
         searchController.searchBar.placeholder = "Busque seus fornecedores"
+
         navigationItem.searchController = searchController
-        definesPresentationContext = true
+        definesPresentationContext = false
+//        format categoria label
+        categoria_Label.font = UIFont(name: "Lato-Semibold", size: CGFloat(28))
+        categoria_Label.textColor = UIColor(red: 0.39, green: 0.2, blue: 0.54, alpha: 1)
+        categoria_Label.text = filtro
         
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     if segue.identifier == "segueDetalhesFornecedor" {
         if let viewController = segue.destination as? DetalhesFornecedorViewController {
-            if let fornecedores = sender as? Fornecedor {
+            if let fornecedores = sender as? Fornecedores {
                 viewController.detalheNomeFornecedor = fornecedores.nome
                 viewController.detalheDescricao = fornecedores.email
                 viewController.detalheCategoria = fornecedores.bairro
@@ -155,7 +159,7 @@ class ListaDeFornecedoresViewController: UIViewController, UITableViewDataSource
 
     func getdata() {
         
-        let jsonUrlString = "https://gist.githubusercontent.com/alineescobar/8aa8fd62a3929f82aae7720edc1900ab/raw/f3c8811ceea9ba5cc4fb429a3685760585e59d31/fornecedores.json"
+        let jsonUrlString = "https://gist.githubusercontent.com/alineescobar/8aa8fd62a3929f82aae7720edc1900ab/raw/9cf8728cf8d699281831d307b92274994031d0bf/fornecedores.json"
         
         guard let url = URL(string: jsonUrlString) else {return}
         
@@ -164,7 +168,7 @@ class ListaDeFornecedoresViewController: UIViewController, UITableViewDataSource
             guard let data = data else {return}
             
             do {
-                let dados = try JSONDecoder().decode([Fornecedor].self, from: data)
+                let dados = try JSONDecoder().decode([Fornecedores].self, from: data)
                 
                 DispatchQueue.main.async {
                     self.listaFornecedores = dados.filter { $0.categoria == self.filtro }

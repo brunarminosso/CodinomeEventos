@@ -76,11 +76,15 @@ protocol RatingPrecoDelegate: class {
         }
         ratingPrecoButtons.removeAll()
         
+        let bundle = Bundle(for: type(of: self))
+        
+        let cifraoCheio = UIImage(named: "cifrao_cheio", in: bundle, compatibleWith: self.traitCollection)
+        let cifraoVazio = UIImage(named: "cifrao_vazio", in: bundle, compatibleWith: self.traitCollection)
         
         for _ in 0..<PrecoCount {
             let button = UIButton()
-            button.backgroundColor = UIColor.red
-            
+            button.setImage(cifraoCheio, for: .selected)
+            button.setImage(cifraoVazio, for: .normal)
             
             button.translatesAutoresizingMaskIntoConstraints = false
             button.heightAnchor.constraint(equalToConstant: PrecoSize.height).isActive = true

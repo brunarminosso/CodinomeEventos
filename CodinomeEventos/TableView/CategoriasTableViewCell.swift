@@ -22,12 +22,12 @@ class CategoriasTableViewCell: UITableViewCell {
         
         moldura.layer.masksToBounds = true
         moldura.layer.cornerRadius = 10.0
-        moldura.layer.borderWidth = 0.5
+//        moldura.layer.borderWidth = 0.5
         moldura.layer.shadowRadius = 4
         moldura.layer.shadowColor = UIColor.black.cgColor
         moldura.layer.shadowOffset = CGSize(width: 0, height: 4)
         moldura.layer.shadowOpacity = 0.23
-        moldura.layer.borderColor = UIColor.lightGray.cgColor
+//        moldura.layer.borderColor = UIColor.lightGray.cgColor
         
         nomeCategoria.font = UIFont(name: "Lato-Semibold", size: CGFloat(20))
         

@@ -36,9 +36,11 @@ class PesquisaViewController: UIViewController, UITableViewDataSource, UITableVi
         return cell!
     }
     
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//
-//    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let nomeCategoria = categorias[indexPath.row]
+        performSegue(withIdentifier: "segueLista", sender: nomeCategoria)
+        
+    }
     
     
     var tituloBotao: String!
@@ -58,10 +60,14 @@ class PesquisaViewController: UIViewController, UITableViewDataSource, UITableVi
 //        tituloBotao = sender.titleLabel?.text ?? ""
 //        performSegue(withIdentifier: "segueLista", sender: nil)
 //    }
-//
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        let destination = segue.destination as? ListaDeFornecedoresViewController
-//        destination?.filtro = tituloBotao
-//    }
+    //  IDENTIFIER: ListaFornecedores
+    //    identifier da segue: segueLista
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destination = segue.destination as? ListaDeFornecedoresViewController
+        if let nomecategoria = sender as? String {
+            destination?.filtro = nomecategoria
+
+        }
+    }
 }
 

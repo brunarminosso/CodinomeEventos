@@ -48,10 +48,17 @@ import UIKit
             button.removeFromSuperview()
         }
         ratingButtons.removeAll()
-//        Create the button
+        
+        let bundle = Bundle(for: type(of: self))
+        
+        let cifraoVazioPeq = UIImage(named: "cifrao_pequeno_vazio", in: bundle, compatibleWith: self.traitCollection)
+//        let estrelaVazia = UIImage(named: "estrela_vazia", in: bundle, compatibleWith: self.traitCollection)
+        
         for _ in 0..<starCount {
         let button = UIButton()
-        button.backgroundColor = UIColor.blue
+            
+        button.setImage(cifraoVazioPeq, for: .normal)
+    
         button.translatesAutoresizingMaskIntoConstraints = false
         button.heightAnchor.constraint(equalToConstant: starSize.height).isActive = true
         button.widthAnchor.constraint(equalToConstant: starSize.width).isActive = true

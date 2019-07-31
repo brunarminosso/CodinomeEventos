@@ -69,7 +69,7 @@
 		FE78A12522F0A2C700BB813B /* Lato-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Thin.ttf"; sourceTree = "<group>"; };
 		FE78A12722F0A2D100BB813B /* Lato-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Black.ttf"; sourceTree = "<group>"; };
 		FE78A12922F0AFEC00BB813B /* CategoriasTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriasTableViewCell.swift; sourceTree = "<group>"; };
-		FE79EDB222E63105007833A2 /* FornecedoresTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FornecedoresTableViewCell.swift; sourceTree = "<group>"; };
+		FE79EDB222E63105007833A2 /* FornecedoresTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FornecedoresTableViewCell.swift; sourceTree = "<group>"; usesTabs = 0; };
 		FE79EDB422E63786007833A2 /* PesquisaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PesquisaViewController.swift; sourceTree = "<group>"; };
 		FE99159E22E7509C0094472A /* ListaDeFornecedoresViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaDeFornecedoresViewController.swift; sourceTree = "<group>"; };
 		FE9915A022E790010094472A /* DetalhesFornecedorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalhesFornecedorViewController.swift; sourceTree = "<group>"; };
