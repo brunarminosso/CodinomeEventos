@@ -10,51 +10,79 @@ import UIKit
 import Firebase
 
 
-class ListaDeEventosViewController: UIViewController, UITableViewDataSource, UITableViewDelegate{
+class ListaDeEventosViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    var ref: DatabaseReference! =  Database.database().reference()
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ListaEventos") as? EventoCriadoTableViewCell
-    
-        cell?.labelNomeDoEvento_ListaEventos.text = listaEventos["0"] as! String
-        
+
+        let value =  self.array[indexPath.row] as? [String : Any] ?? [:]
+        cell?.labelNomeDoEvento_ListaEventos.text = value["name"] as? String
+        cell?.dia_ListaEventos.text = value["dia"] as? String
+        cell?.mes_ListaEventos.text = value["mes"] as? String
+        cell?.convidados_ListaEventos.text = value["convidados"] as? String
+        cell?.orc_ListaEventos.text = value["orçamento"] as? String
+
         return cell!
-        
+
     }
-    
-    
+
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return tamanhoArray
+        return self.array.count
     }
     
     @IBOutlet weak var tableView: UITableView!
     
-    var ref: DatabaseReference! =  Database.database().reference()
+    
    
     var tamanhoArray: Int = 0
     
     var listaEventos: [String: Any] = [:]
+    var array: [[String : Any]] = []
+    
+    
+    
+    
+    
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.delegate = self
+        tableView.dataSource = self
         getdata()
+        
+        
+        
+        
         // Do any additional setup after loading the view.
         
+      
+
+            // ...
+     
     }
+    
     func getdata() {
+        
+        
+        
         
         ref.child("eventos").observe(.value, with: { (snapshot) in
             if let dicionario = snapshot.value as? [String: Any] {
                 self.tamanhoArray = dicionario.count
                 self.listaEventos = dicionario
+                self.array = self.listaEventos.compactMap{ return $0.value as? [String : Any] }
                 DispatchQueue.main.async {
                     self.tableView.reloadData()
                 }
                 print("tamanho array:", self.listaEventos.count)
                 print(dicionario)
-                print(dicionario.randomElement())
-                
+               
             }
+            
         })
         
     }

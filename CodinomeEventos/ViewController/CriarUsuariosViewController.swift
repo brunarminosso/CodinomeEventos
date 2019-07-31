@@ -38,7 +38,6 @@ class CriarUsuariosViewController: UIViewController {
         let borderWidth = CGFloat(1.0)
         
         campo_nome.borderStyle = UITextField.BorderStyle.none
-        campo_nome.placeholder = "  " + "nome completo"
         campo_nome.layer.borderColor = UIColor(red: 0.39, green: 0.2, blue: 0.54, alpha: 1).cgColor
         campo_nome.layer.cornerRadius = raio
         campo_nome.layer.borderWidth = borderWidth
