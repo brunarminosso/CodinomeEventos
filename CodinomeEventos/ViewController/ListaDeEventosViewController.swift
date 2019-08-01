@@ -14,6 +14,13 @@ class ListaDeEventosViewController: UIViewController, UITableViewDelegate, UITab
     
     var ref: DatabaseReference! =  Database.database().reference()
     
+    
+    @IBOutlet weak var ViewAdd: UIView!
+    
+    
+    
+    
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ListaEventos") as? EventoCriadoTableViewCell
 
@@ -53,6 +60,13 @@ class ListaDeEventosViewController: UIViewController, UITableViewDelegate, UITab
         tableView.delegate = self
         tableView.dataSource = self
         getdata()
+        
+       ViewAdd.layer.cornerRadius = 10.0
+       ViewAdd.layer.masksToBounds = true
+        ViewAdd.layer.borderWidth = 0
+        
+       
+        
         
         
         
