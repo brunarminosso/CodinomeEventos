@@ -32,65 +32,67 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hgb-gA-jTN">
-                                <rect key="frame" x="37" y="590" width="340" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Lato-Medium" family="Lato" pointSize="18"/>
-                                <state key="normal" title="Entrar">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="LoginButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oJ3-V5-zAV"/>
-                                </connections>
-                            </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qru-Ya-2tN">
-                                <rect key="frame" x="37" y="311" width="340" height="273"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="dfV-Uh-lN2">
+                                <rect key="frame" x="37" y="263" width="340" height="262"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Please, login or create an account." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NcC-m4-U4i">
-                                        <rect key="frame" x="0.0" y="37" width="340" height="17"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="14"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="p5w-rh-5Hc">
-                                        <rect key="frame" x="0.0" y="141" width="340" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0AD-j0-dwR">
-                                        <rect key="frame" x="0.0" y="97" width="340" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OLz-Fu-P9l">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OLz-Fu-P9l">
                                         <rect key="frame" x="0.0" y="0.0" width="340" height="34"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="Lato-Semibold" family="Lato" pointSize="28"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FyF-6X-gdV">
-                                        <rect key="frame" x="0.0" y="181" width="340" height="32"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please, login or create an account." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NcC-m4-U4i">
+                                        <rect key="frame" x="0.0" y="51" width="340" height="17"/>
+                                        <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0AD-j0-dwR">
+                                        <rect key="frame" x="0.0" y="85" width="340" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="z68-d0-iSY"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="continue" enablesReturnKeyAutomatically="YES" smartDashesType="yes"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="p5w-rh-5Hc">
+                                        <rect key="frame" x="0.0" y="132" width="340" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="jW3-Xm-vvo"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" textContentType="password"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FyF-6X-gdV">
+                                        <rect key="frame" x="0.0" y="179" width="340" height="32"/>
                                         <fontDescription key="fontDescription" name="Lato-Medium" family="Lato" pointSize="16"/>
                                         <state key="normal" title="Forgot password?"/>
                                         <connections>
                                             <action selector="forgotPass:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UwD-kJ-kut"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hgb-gA-jTN">
+                                        <rect key="frame" x="0.0" y="228" width="340" height="34"/>
+                                        <fontDescription key="fontDescription" name="Lato-Medium" family="Lato" pointSize="18"/>
+                                        <state key="normal" title="Entrar">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="LoginButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oJ3-V5-zAV"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </view>
+                            </stackView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="eventeiTestes" translatesAutoresizingMaskIntoConstraints="NO" id="idv-08-18i">
-                                <rect key="frame" x="87" y="179" width="240" height="16"/>
+                                <rect key="frame" x="87" y="158" width="240" height="65"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="idv-08-18i" secondAttribute="height" multiplier="48:13" id="ICg-kc-rYm"/>
+                                </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R2G-hY-IXi">
-                                <rect key="frame" x="0.0" y="789" width="414" height="33"/>
+                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R2G-hY-IXi">
+                                <rect key="frame" x="146.5" y="823" width="121" height="34"/>
                                 <fontDescription key="fontDescription" name="Lato-Semibold" family="Lato" pointSize="18"/>
                                 <state key="normal" title="Create account"/>
                                 <connections>
@@ -100,16 +102,13 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="R2G-hY-IXi" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="3UA-yg-OhE"/>
-                            <constraint firstItem="qru-Ya-2tN" firstAttribute="top" secondItem="idv-08-18i" secondAttribute="bottom" constant="116" id="aFl-7S-SXH"/>
-                            <constraint firstItem="qru-Ya-2tN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="37" id="e44-EQ-JN5"/>
-                            <constraint firstItem="R2G-hY-IXi" firstAttribute="top" secondItem="qru-Ya-2tN" secondAttribute="bottom" constant="205" id="i35-H6-D5Y"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qru-Ya-2tN" secondAttribute="trailing" constant="37" id="jAA-Zi-Cev"/>
-                            <constraint firstItem="R2G-hY-IXi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="l4s-jk-kBG"/>
-                            <constraint firstItem="idv-08-18i" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="87" id="ln3-be-mMz"/>
-                            <constraint firstItem="idv-08-18i" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="91" id="mE5-yY-OBd"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="idv-08-18i" secondAttribute="trailing" constant="87" id="vBc-rG-U2B"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="R2G-hY-IXi" secondAttribute="bottom" constant="40" id="wu6-Ig-ZET"/>
+                            <constraint firstItem="dfV-Uh-lN2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="37" id="AaT-tA-Tak"/>
+                            <constraint firstItem="R2G-hY-IXi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="JcW-KW-diQ"/>
+                            <constraint firstItem="idv-08-18i" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="70" id="c2E-Ak-ivI"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dfV-Uh-lN2" secondAttribute="trailing" constant="37" id="kFC-gY-4AG"/>
+                            <constraint firstItem="idv-08-18i" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="n3N-wT-hIy"/>
+                            <constraint firstItem="dfV-Uh-lN2" firstAttribute="top" secondItem="idv-08-18i" secondAttribute="bottom" constant="40" id="rFH-GI-ULp"/>
+                            <constraint firstItem="R2G-hY-IXi" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="-5" id="sSq-Ru-9N5"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -294,22 +293,22 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mDc-6n-gzz">
-                                <rect key="frame" x="37" y="106" width="340" height="105"/>
+                                <rect key="frame" x="37" y="106" width="340" height="107"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hi, Claudia" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AJT-nx-cT6">
-                                        <rect key="frame" x="0.0" y="0.0" width="340" height="33"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="340" height="34"/>
                                         <fontDescription key="fontDescription" name="Lato-Semibold" family="Lato" pointSize="28"/>
                                         <color key="textColor" red="0.3921568627" green="0.1960784314" blue="0.54117647059999996" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let’s event, shall we?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ph7-jM-UpM">
-                                        <rect key="frame" x="0.0" y="35" width="340" height="20"/>
+                                        <rect key="frame" x="0.0" y="36" width="340" height="20"/>
                                         <fontDescription key="fontDescription" name="Lato-Medium" family="Lato" pointSize="17"/>
                                         <color key="textColor" red="0.49411764705882355" green="0.46666666666666667" blue="0.46666666666666667" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Categories" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t9z-UW-aCG">
-                                        <rect key="frame" x="0.0" y="84" width="340" height="21"/>
+                                        <rect key="frame" x="0.0" y="85" width="340" height="22"/>
                                         <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="18"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -330,7 +329,7 @@
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cEf-Qk-L3i">
-                                <rect key="frame" x="20" y="216" width="374" height="680"/>
+                                <rect key="frame" x="20" y="218" width="374" height="678"/>
                                 <color key="backgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.94901960784313721" alpha="1" colorSpace="calibratedRGB"/>
                                 <inset key="separatorInset" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <prototypes>
@@ -861,8 +860,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6KR-ug-Nwf">
-                                <rect key="frame" x="20" y="126" width="374" height="687"/>
+                            <tableView contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6KR-ug-Nwf">
+                                <rect key="frame" x="20" y="152" width="374" height="661"/>
                                 <color key="backgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.94901960784313721" alpha="1" colorSpace="calibratedRGB"/>
                                 <inset key="separatorInset" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <prototypes>

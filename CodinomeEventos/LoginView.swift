@@ -29,7 +29,7 @@ class LoginView: UIViewController, LoginButtonDelegate {
                 
                 self.performSegue(withIdentifier: "loginToHome", sender: self)
             } else {
-                
+                print("botao cancel precionado")
             }
     }
     }
@@ -56,6 +56,9 @@ class LoginView: UIViewController, LoginButtonDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard))
+        view.addGestureRecognizer(tap)
         
         let raio = CGFloat(10.0)
         let borderWidth = CGFloat(1.0)
@@ -84,15 +87,21 @@ class LoginView: UIViewController, LoginButtonDelegate {
         btnFBLogin.layer.cornerRadius = 10.0
         
 //        funcao de login
-        let btnFBLogin = FBLoginButton(frame: CGRect(x: 37, y: 640, width: 340, height: 40))
+        let btnFBLogin = FBLoginButton(frame: CGRect(x: 37, y: 520, width: 300, height: 35))
             btnFBLogin.layer.cornerRadius = 10.0
             btnFBLogin.layer.masksToBounds = true
+//            btnFBLogin.heightAnchor.constraint(equalToConstant: 30).isActive = true
+//            btnFBLogin.widthAnchor.constraint(equalToConstant: 250).isActive = true
         
         btnFBLogin.delegate = self
         
             self.view.addSubview(btnFBLogin)
         
     }
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
+    }
+    
     @IBAction func LoginButton(_ sender: AnyObject) {
         do {
             Auth.auth().signIn(withEmail: emailText.text!, password: senhaText.text!) { (user, error) in
