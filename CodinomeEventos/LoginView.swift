@@ -97,7 +97,22 @@ class LoginView: UIViewController, LoginButtonDelegate {
         
             self.view.addSubview(btnFBLogin)
         
+//        print(Auth.auth().currentUser)
+        
+        
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        if Auth.auth().currentUser != nil {
+            self.performSegue(withIdentifier: "loginToHome", sender: self)
+            print("logado")
+//            self.presentTabBar()
+        } else {
+            // Set you login view controller here as root view controller
+            print("não logado")
+        }
+    }
+    
     @objc func dismissKeyboard() {
         view.endEditing(true)
     }
