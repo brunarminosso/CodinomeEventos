@@ -8,17 +8,18 @@
 
 import UIKit
 
-class DetalhesFornecedorViewController: UIViewController{
-//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-////, UITableViewDataSource, UITableViewDelegate
-//    }
-//
-//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-////
-//    }
-    
+class DetalhesFornecedorViewController: UIViewController, UITableViewDataSource, UITableViewDelegate{
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return (fornecedor?.avaliacoes.count)!
+    }
 
-    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Avaliacoes") as? AvaliacoesTableViewCell
+        
+        cell?.Aval_None.text = fornecedor?.avaliacoes[indexPath.row].nomeAvaliador
+        
+        return cell!
+    }
 
 //    tableView.dequeueReusableCell(withIdentifier: "ListaFornecedores") as? FornecedoresTableViewCell
     
@@ -42,8 +43,10 @@ class DetalhesFornecedorViewController: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.delegate = self
+        tableView.dataSource = self
         detalhe_categoria.font = UIFont(name: "Lato-bold", size: CGFloat(18))
-        
+        tableView.reloadData()
         moldura.layer.masksToBounds = true
         moldura.layer.cornerRadius = 10.0
         moldura.layer.shadowRadius = 4

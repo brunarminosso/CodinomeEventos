@@ -41,13 +41,14 @@ class AvaliarFornecedorViewController: UIViewController, RatingPontualidadeDeleg
     @IBOutlet weak var ratingQualidadeView: RatingQualidade!
     
     @IBOutlet weak var ratingPrecoView: RatingPreco!
+
     
-    @IBOutlet weak var caixaComentario: UITextView!
+    @IBOutlet weak var avaliarButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        caixaComentario.backgroundColor = UIColor.gray
+//        caixaComentario.backgroundColor = UIColor.gray
 
         guard let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext else { return }
         let DadosFornecedor = Dados_fornecedor(context: context)
@@ -57,14 +58,16 @@ class AvaliarFornecedorViewController: UIViewController, RatingPontualidadeDeleg
         ratingPrecoView.delegate = self
         
         
+        avaliarButton.tintColor = UIColor(red: 0.39, green: 0.2, blue: 0.54, alpha: 1)
+        
+//        avaliarButton.layer.backgroundColor = UIColor(red: <#T##CGFloat#>, green: <#T##CGFloat#>, blue: <#T##CGFloat#>, alpha: <#T##CGFloat#>)
+        
         nomeFornecedor.font = UIFont(name: "Lato-Semibold", size: CGFloat(28))
         textoAvalie.font = UIFont(name: "Lato-Semibold", size: CGFloat(14))
         textoPontualidaed.font = UIFont(name: "Lato-Semibold", size: CGFloat(20))
         textoQualidade.font = UIFont(name: "Lato-Semibold", size: CGFloat(20))
         textoPreco.font = UIFont(name: "Lato-Semibold", size: CGFloat(20))
-        textoComentario.font = UIFont(name: "Lato-Semibold", size: CGFloat(20))
-        
-        caixaComentario.layer.cornerRadius = 10.0
+
         
     }
     
