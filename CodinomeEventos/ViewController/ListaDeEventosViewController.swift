@@ -18,6 +18,15 @@ class ListaDeEventosViewController: UIViewController, UITableViewDelegate, UITab
     @IBOutlet weak var ViewAdd: UIView!
     
     
+    @IBOutlet weak var createLabel: UILabel!
+    
+    @IBOutlet weak var yourLabel: UILabel!
+    
+   
+    
+    @IBOutlet weak var guestsLabel: UILabel!
+    
+    
     
     
     
@@ -64,6 +73,13 @@ class ListaDeEventosViewController: UIViewController, UITableViewDelegate, UITab
        ViewAdd.layer.cornerRadius = 10.0
        ViewAdd.layer.masksToBounds = true
         ViewAdd.layer.borderWidth = 0
+        
+        createLabel.font = UIFont(name: "Lato-bold", size: CGFloat(25))
+          yourLabel.font = UIFont(name: "Lato-regular", size: CGFloat(29))
+        
+        
+        
+        
         
        
         
