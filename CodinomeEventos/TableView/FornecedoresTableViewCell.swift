@@ -21,7 +21,7 @@ class FornecedoresTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        ListaFornecedores_nomeFornecedor.font = UIFont(name: "Lato-Medium", size: CGFloat(20))
+        ListaFornecedores_nomeFornecedor.font = UIFont(name: "Lato-Mediun", size: CGFloat(20))
         ListaFornecedores_nomeFornecedor.textColor = UIColor(red: 0.39, green: 0.2, blue: 0.54, alpha: 1)
         
         ListaFornecedores_endereco.font = UIFont(name: "Lato-Medium", size: CGFloat(14))

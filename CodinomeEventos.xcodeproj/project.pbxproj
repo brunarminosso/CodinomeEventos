@@ -39,6 +39,7 @@
 		FEA53E1B22EB4A8C002DA0FC /* CriarEventoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA53E1A22EB4A8C002DA0FC /* CriarEventoTableViewCell.swift */; };
 		FEAE272922E8825300F9D6F4 /* RatingControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAE272822E8825300F9D6F4 /* RatingControl.swift */; };
 		FEAF7FC722F31F6D000CBFBD /* RatingAval.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAF7FC622F31F6D000CBFBD /* RatingAval.swift */; };
+		FEEA463722F352F300EA8F19 /* AvaliacoesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEEA463622F352F300EA8F19 /* AvaliacoesTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -78,6 +79,7 @@
 		FEA53E1A22EB4A8C002DA0FC /* CriarEventoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CriarEventoTableViewCell.swift; sourceTree = "<group>"; };
 		FEAE272822E8825300F9D6F4 /* RatingControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingControl.swift; sourceTree = "<group>"; };
 		FEAF7FC622F31F6D000CBFBD /* RatingAval.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingAval.swift; sourceTree = "<group>"; };
+		FEEA463622F352F300EA8F19 /* AvaliacoesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvaliacoesTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +170,7 @@
 				FEA53E1822EB4A7F002DA0FC /* EventoCriadoTableViewCell.swift */,
 				FEA53E1A22EB4A8C002DA0FC /* CriarEventoTableViewCell.swift */,
 				FE78A12922F0AFEC00BB813B /* CategoriasTableViewCell.swift */,
+				FEEA463622F352F300EA8F19 /* AvaliacoesTableViewCell.swift */,
 			);
 			path = TableView;
 			sourceTree = "<group>";
@@ -331,6 +334,7 @@
 				E521CD1522E0A0F4000C192D /* ViewController.swift in Sources */,
 				FE5C801C22EA056F003DA454 /* AvaliarFornecedorViewController.swift in Sources */,
 				FE5C801A22E9F090003DA454 /* CriarEventosViewController.swift in Sources */,
+				FEEA463722F352F300EA8F19 /* AvaliacoesTableViewCell.swift in Sources */,
 				E53AD41222E5E6C000ED5CA7 /* CodinomeEventos.xcdatamodeld in Sources */,
 				E566A0A022E6151200C11330 /* LoginView.swift in Sources */,
 				FE5C802022EA3690003DA454 /* RatingQualidade.swift in Sources */,

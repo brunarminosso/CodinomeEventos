@@ -8,8 +8,19 @@
 
 import UIKit
 
-class DetalhesFornecedorViewController: UIViewController {
+class DetalhesFornecedorViewController: UIViewController, UITableViewDataSource, UITableViewDelegate{
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//        
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//
+    }
+    
 
+    
+
+//    tableView.dequeueReusableCell(withIdentifier: "ListaFornecedores") as? FornecedoresTableViewCell
     
     @IBOutlet weak var moldura: UIView!
    
@@ -22,8 +33,12 @@ class DetalhesFornecedorViewController: UIViewController {
     @IBOutlet weak var nome_fornecedor: UILabel!
     @IBOutlet weak var evaluate_button: UIButton!
     
+    
+    @IBOutlet weak var tableView: UITableView!
+    
     var fornecedor: Fornecedores?
     
+//    var avaliacoes = fornecedor.avali
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,8 +51,10 @@ class DetalhesFornecedorViewController: UIViewController {
         moldura.layer.shadowOffset = CGSize(width: 0, height: 4)
         moldura.layer.shadowOpacity = 0.23
 
-        evaluate_label.font = UIFont(name: "Lato-semibold", size: CGFloat(20))
-        
+        nota.font = UIFont(name: "Lato-Semibold", size: CGFloat(20))
+        evaluate_label.font = UIFont(name: "Lato-Semibold", size: CGFloat(20))
+        nome_fornecedor.font = UIFont(name: "Lato-Semibold", size: CGFloat(20))
+        descricao.font = UIFont(name: "Lato-Semibold", size: CGFloat(14))
         detalhe_categoria.text = fornecedor?.categoria
         nome_fornecedor.text = fornecedor?.nome
         descricao.text = fornecedor?.descricao
@@ -53,8 +70,5 @@ class DetalhesFornecedorViewController: UIViewController {
         
 //        detalhe_categoria.text =
     }
-    
-
-  
     
 }
