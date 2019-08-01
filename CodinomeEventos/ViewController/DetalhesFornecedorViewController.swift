@@ -8,14 +8,14 @@
 
 import UIKit
 
-class DetalhesFornecedorViewController: UIViewController, UITableViewDataSource, UITableViewDelegate{
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+class DetalhesFornecedorViewController: UIViewController{
+//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+////, UITableViewDataSource, UITableViewDelegate
+//    }
 //
-    }
+//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+////
+//    }
     
 
     
