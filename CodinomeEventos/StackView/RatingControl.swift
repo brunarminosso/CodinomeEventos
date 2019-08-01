@@ -43,6 +43,8 @@ import UIKit
 //MARK: Private Methods
     private func setupButtons () {
 //Clear any existing buttons
+        
+        
         for button in ratingButtons {
             removeArrangedSubview(button)
             button.removeFromSuperview()

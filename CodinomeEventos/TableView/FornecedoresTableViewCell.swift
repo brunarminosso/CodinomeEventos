@@ -21,7 +21,7 @@ class FornecedoresTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        ListaFornecedores_nomeFornecedor.font = UIFont(name: "Lato-Medium", size: CGFloat(24))
+        ListaFornecedores_nomeFornecedor.font = UIFont(name: "Lato-Medium", size: CGFloat(20))
         ListaFornecedores_nomeFornecedor.textColor = UIColor(red: 0.39, green: 0.2, blue: 0.54, alpha: 1)
         
         ListaFornecedores_endereco.font = UIFont(name: "Lato-Medium", size: CGFloat(14))
@@ -32,8 +32,8 @@ class FornecedoresTableViewCell: UITableViewCell {
         
         moldura.layer.masksToBounds = true
         moldura.layer.cornerRadius = 10.0
-        moldura.layer.borderWidth = 0.5
-        moldura.layer.borderColor = UIColor.lightGray.cgColor
+//        moldura.layer.borderWidth = 0.5
+//        moldura.layer.borderColor = UIColor.lightGray.cgColor
         
     }
 

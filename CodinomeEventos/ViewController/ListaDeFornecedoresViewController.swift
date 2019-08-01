@@ -149,13 +149,17 @@ class ListaDeFornecedoresViewController: UIViewController, UITableViewDataSource
     if segue.identifier == "segueDetalhesFornecedor" {
         if let viewController = segue.destination as? DetalhesFornecedorViewController {
             if let fornecedores = sender as? Fornecedores {
-                viewController.detalheNomeFornecedor = fornecedores.nome
-                viewController.detalheDescricao = fornecedores.email
-                viewController.detalheCategoria = fornecedores.bairro
+                viewController.fornecedor = fornecedores
+//                viewController.detalheNomeFornecedor = fornecedores.nome
+//                viewController.detalheDescricao = fornecedores.descricao
+//                viewController.detalheCategoria = fornecedores.categoria
+//                viewController.detalheEndereco = fornecedores.endereco
+//                viewController.nota = fornecedores.notaAvaliacaoMedia
+//                viewController. = filtro
             }
         }
-        }
     }
+}
 
     func getdata() {
         
