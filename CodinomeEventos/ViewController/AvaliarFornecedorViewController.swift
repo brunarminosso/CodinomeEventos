@@ -57,10 +57,7 @@ class AvaliarFornecedorViewController: UIViewController, RatingPontualidadeDeleg
         ratingQualidadeView.delegate = self
         ratingPrecoView.delegate = self
         
-        
         avaliarButton.tintColor = UIColor(red: 0.39, green: 0.2, blue: 0.54, alpha: 1)
-        
-//        avaliarButton.layer.backgroundColor = UIColor(red: <#T##CGFloat#>, green: <#T##CGFloat#>, blue: <#T##CGFloat#>, alpha: <#T##CGFloat#>)
         
         nomeFornecedor.font = UIFont(name: "Lato-Semibold", size: CGFloat(28))
         textoAvalie.font = UIFont(name: "Lato-Semibold", size: CGFloat(14))
