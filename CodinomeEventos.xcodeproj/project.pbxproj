@@ -38,6 +38,7 @@
 		FEA53E1922EB4A7F002DA0FC /* EventoCriadoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA53E1822EB4A7F002DA0FC /* EventoCriadoTableViewCell.swift */; };
 		FEA53E1B22EB4A8C002DA0FC /* CriarEventoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA53E1A22EB4A8C002DA0FC /* CriarEventoTableViewCell.swift */; };
 		FEAE272922E8825300F9D6F4 /* RatingControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAE272822E8825300F9D6F4 /* RatingControl.swift */; };
+		FEAF7FC722F31F6D000CBFBD /* RatingAval.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAF7FC622F31F6D000CBFBD /* RatingAval.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -76,6 +77,7 @@
 		FEA53E1822EB4A7F002DA0FC /* EventoCriadoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventoCriadoTableViewCell.swift; sourceTree = "<group>"; };
 		FEA53E1A22EB4A8C002DA0FC /* CriarEventoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CriarEventoTableViewCell.swift; sourceTree = "<group>"; };
 		FEAE272822E8825300F9D6F4 /* RatingControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingControl.swift; sourceTree = "<group>"; };
+		FEAF7FC622F31F6D000CBFBD /* RatingAval.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingAval.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -191,6 +193,7 @@
 				FE5C801D22EA0905003DA454 /* RatingPontualidade.swift */,
 				FE5C801F22EA3690003DA454 /* RatingQualidade.swift */,
 				FE5C802122EA36AE003DA454 /* RatingPreco.swift */,
+				FEAF7FC622F31F6D000CBFBD /* RatingAval.swift */,
 			);
 			path = StackView;
 			sourceTree = "<group>";
@@ -318,6 +321,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FEAF7FC722F31F6D000CBFBD /* RatingAval.swift in Sources */,
 				FE15DBC722EF16AB003B6711 /* ListaDeEventosViewController.swift in Sources */,
 				FE79EDB322E63105007833A2 /* FornecedoresTableViewCell.swift in Sources */,
 				FE9915A122E790010094472A /* DetalhesFornecedorViewController.swift in Sources */,
