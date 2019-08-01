@@ -40,6 +40,13 @@ class EventoCriadoTableViewCell: UITableViewCell {
     moldura_evento.layer.shadowOpacity = 0.23
     moldura_evento.layer.borderColor = UIColor.lightGray.cgColor
         
+         labelNomeDoEvento_ListaEventos.font = UIFont(name: "Lato-bold", size: CGFloat(25))
+          convidados_ListaEventos.font = UIFont(name: "Lato-bold", size: CGFloat(18))
+          orc_ListaEventos.font = UIFont(name: "Lato-bold", size: CGFloat(18))
+          dia_ListaEventos.font = UIFont(name: "Lato-bold", size: CGFloat(60))
+          mes_ListaEventos.font = UIFont(name: "Lato-bold", size: CGFloat(16))
+         
+        
         
         
     //

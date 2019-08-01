@@ -24,6 +24,7 @@ class CriarEventosViewController: UIViewController {
     @IBOutlet weak var mes_evento: UITextField!
     
     
+    @IBOutlet weak var descriLabel: UILabel!
     
     
     
@@ -31,6 +32,8 @@ class CriarEventosViewController: UIViewController {
         super.viewDidLoad()
         let raio = CGFloat(10.0)
         let borderWidth = CGFloat(1.0)
+        
+          descriLabel.font = UIFont(name: "Lato-regular", size: CGFloat(25))
         
         nome_evento.borderStyle = UITextField.BorderStyle.none
         nome_evento.layer.borderColor = UIColor(red: 0.39, green: 0.2, blue: 0.54, alpha: 1).cgColor
