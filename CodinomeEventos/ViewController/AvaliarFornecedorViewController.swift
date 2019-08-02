@@ -68,4 +68,13 @@ class AvaliarFornecedorViewController: UIViewController, RatingPontualidadeDeleg
         
     }
     
+    @IBAction func aval_press(_ sender: Any) {
+        let alert = UIAlertController(title: "Evaluation!", message: "Evaluation sent!", preferredStyle: .alert)
+        
+        alert.addAction(UIAlertAction(title: "Ok!", style: .default, handler: { action in
+            
+        }
+        ))
+        self.present(alert, animated: true, completion: nil)
+    }
 }
